@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <update handle="loki_components"/>
+
+    <body>
+        <referenceContainer name="content">
+            <block name="example-loke-components.like-form" template="Yireo_LokiComponents::form.phtml">
+                <block name="example-loke-components.like-form-fields" template="YireoTraining_ExampleLokiComponents::like-form-fields.phtml"/>
+            </block>
+
+            <block name="example-loke-components.comments-add" template="Yireo_LokiComponents::form.phtml">
+                <block template="YireoTraining_ExampleLokiComponents::comments-add.phtml"/>
+            </block>
+
+            <block name="example-loke-components.comments-listing" template="YireoTraining_ExampleLokiComponents::comments-listing.phtml"/>
+            <block name="example-loke-components.comments-counter" template="YireoTraining_ExampleLokiComponents::comments-counter.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="before.body.end">
+            <block name="example-loke-components.comments-script" template="YireoTraining_ExampleLokiComponents::comments-script.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

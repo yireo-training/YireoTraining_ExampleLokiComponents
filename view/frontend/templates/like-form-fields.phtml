@@ -1,0 +1,22 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use YireoTraining\ExampleLokiComponents\Component\Like\LikeViewModel;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+use Yireo\LokiComponents\Util\ComponentUtil;
+
+/** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var LikeViewModel $viewModel */
+/** @var ComponentUtil $componentUtil */
+$componentUtil = $viewModelFactory->create(ComponentUtil::class);
+$viewModel = $block->getParentBlock()->getViewModel();
+?>
+<?php if ($viewModel->liked()): ?>
+    <input type="hidden" name="data" value="0"/>
+    <button class="btn btn-primary" <?php if ($componentUtil->isAjax()): ?>x-autofocus<?php endif; ?>>Unlike</button>
+<?php else: ?>
+    <input type="hidden" name="data" value="1"/>
+    <button class="btn btn-primary" <?php if ($componentUtil->isAjax()): ?>x-autofocus<?php endif; ?>>Like</button>
+<?php endif; ?>
