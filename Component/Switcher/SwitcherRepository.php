@@ -1,15 +1,14 @@
 <?php declare(strict_types=1);
 
-namespace YireoTraining\ExampleLokiComponents\Component\Like;
+namespace YireoTraining\ExampleLokiComponents\Component\Switcher;
 
-use RuntimeException;
 use YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext;
 use Yireo\LokiComponents\Component\ComponentRepository;
 
 /**
  * @method GenericContext getContext()
  */
-class LikeRepository extends ComponentRepository
+class SwitcherRepository extends ComponentRepository
 {
     protected function getData(): mixed
     {

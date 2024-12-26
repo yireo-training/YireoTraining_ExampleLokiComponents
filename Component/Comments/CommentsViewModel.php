@@ -8,6 +8,6 @@ class CommentsViewModel extends ComponentViewModel
 {
     public function getComments(): array
     {
-        return (array)$this->getData();
+        return (array)$this->getValue();
     }
 }

@@ -1,0 +1,22 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use YireoTraining\ExampleLokiComponents\Component\Comments\CommentsViewModel;
+use Yireo\LokiComponents\Util\ComponentUtil;
+
+/** @var Template $block */
+/** @var CommentsViewModel $viewModel */
+/** @var ComponentUtil $componentUtil */
+?>
+<div>
+    <h3>Comments</h3>
+    <ul>
+        <?php foreach ($viewModel->getComments() as $comment) : ?>
+            <li>
+                <?= $comment ?>
+                <button class="btn w-3" @click="remove" data-comment="<?= $comment ?>">x</button>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

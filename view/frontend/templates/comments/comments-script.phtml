@@ -1,0 +1,21 @@
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('ExampleLokiComponentsComments', () => ({
+            ...LokiComponentType,
+            newComment: '',
+            add(event) {
+                this.post({
+                    task: 'add',
+                    comment: this.newComment
+                });
+                this.newComment = '';
+            },
+            remove(event) {
+                this.post({
+                    task: 'remove',
+                    comment: event.target.getAttribute('data-comment')
+                });
+            }
+        }));
+    });
+</script>

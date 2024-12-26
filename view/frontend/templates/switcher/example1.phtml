@@ -1,0 +1,13 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+?>
+<div class="my-4">
+    Current template: <code><?= $block->getTemplate() ?></code>
+    <button @click="toggle" class="btn btn-primary">
+        Switch to <code>example2.phtml</code>
+    </button>
+</div>

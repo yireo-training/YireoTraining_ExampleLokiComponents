@@ -11,12 +11,16 @@ use Yireo\LokiComponents\Util\ComponentUtil;
 /** @var LikeViewModel $viewModel */
 /** @var ComponentUtil $componentUtil */
 $componentUtil = $viewModelFactory->create(ComponentUtil::class);
-$viewModel = $block->getParentBlock()->getViewModel();
+$viewModel = $block->getViewModel();
 ?>
-<?php if ($viewModel->liked()): ?>
-    <input type="hidden" name="data" value="0"/>
-    <button class="btn btn-primary" <?php if ($componentUtil->isAjax()): ?>x-autofocus<?php endif; ?>>Unlike</button>
-<?php else: ?>
-    <input type="hidden" name="data" value="1"/>
-    <button class="btn btn-primary" <?php if ($componentUtil->isAjax()): ?>x-autofocus<?php endif; ?>>Like</button>
-<?php endif; ?>
+<div class="my-4">
+    <?php if ($viewModel->getValue()): ?>
+        <button @click="toggle" class="btn btn-primary" <?php if ($componentUtil->isAjax()): ?>x-autofocus<?php endif; ?>>
+            Unlike
+        </button>
+    <?php else: ?>
+        <button @click="toggle" class="btn btn-primary" <?php if ($componentUtil->isAjax()): ?>x-autofocus<?php endif; ?>>
+            Like
+        </button>
+    <?php endif; ?>
+</div>

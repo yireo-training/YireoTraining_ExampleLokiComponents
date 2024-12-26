@@ -1,0 +1,11 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+?>
+<div>
+    <input aria-label="Comment text" x-model="newComment" required/>
+    <button @click="add" class="btn btn-primary">Submit</button>
+</div>
