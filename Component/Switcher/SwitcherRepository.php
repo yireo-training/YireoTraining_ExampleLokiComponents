@@ -17,7 +17,7 @@ class SwitcherRepository extends ComponentRepository
 
     protected function saveData(mixed $data): void
     {
-        $value = (bool)$data['value'];
+        $value = (bool)$data;
         $this->getContext()->customerSession->setLike($value);
         $msg = $value ? 'You liked it' : 'You did not liked it';
         $this->messageManager->addGlobalNotice($msg);
