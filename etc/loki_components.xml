@@ -28,11 +28,13 @@
     >
         <component name="example-loki-components.comments-add">
             <target name="example-loki-components.comments-listing"/>
-            <target name="example-loki-components.comments-counter"/>
             <validator name="required"/>
         </component>
 
-        <component name="example-loki-components.comments-listing"/>
+        <component name="example-loki-components.comments-listing">
+            <target name="example-loki-components.comments-counter"/>
+        </component>
+
         <component name="example-loki-components.comments-counter"/>
     </componentGroup>
 </components>
