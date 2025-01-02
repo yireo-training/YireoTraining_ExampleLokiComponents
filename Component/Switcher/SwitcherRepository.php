@@ -20,6 +20,6 @@ class SwitcherRepository extends ComponentRepository
         $value = (bool)$data;
         $this->getContext()->customerSession->setLike($value);
         $msg = $value ? 'You liked it' : 'You did not liked it';
-        $this->messageManager->addGlobalNotice($msg);
+        $this->getGlobalMessageRegistry()->addSuccess($msg);
     }
 }

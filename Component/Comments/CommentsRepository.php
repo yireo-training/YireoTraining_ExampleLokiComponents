@@ -36,7 +36,7 @@ class CommentsRepository extends ComponentRepository
         if ($data['task'] === 'add') {
             $comments[] = (string)$data['comment'];
             $customerSession->setComments($comments);
-            $this->messageManager->addGlobalNotice('Added a comment');
+            $this->getGlobalMessageRegistry()->addNotice('Added a comment');
         }
 
         if ($data['task'] === 'remove') {
@@ -45,7 +45,7 @@ class CommentsRepository extends ComponentRepository
             });
 
             $customerSession->setComments($comments);
-            $this->messageManager->addGlobalNotice('Removed a comment');
+            $this->getGlobalMessageRegistry()->addNotice('Removed a comment');
         }
     }
 }
