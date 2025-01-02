@@ -6,6 +6,7 @@
     <body>
         <referenceContainer name="content">
             <block name="example-loki-components.random" template="YireoTraining_ExampleLokiComponents::random.phtml"/>
+
             <block name="example-loki-components.like" template="YireoTraining_ExampleLokiComponents::like.phtml">
                 <arguments>
                     <argument name="js_component_name" xsi:type="string">LokiComponentToggle</argument>
