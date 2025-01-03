@@ -2,13 +2,9 @@
 
 namespace YireoTraining\ExampleLokiComponents\Component\Generic;
 
-use Magento\Customer\Model\Session as CustomerSession;
-use Yireo\LokiComponents\Component\ComponentContextInterface;
+use Yireo\LokiComponents\Component\ComponentContext;
 
-class GenericContext implements ComponentContextInterface
+// @todo: Remove this class
+class GenericContext extends ComponentContext
 {
-    public function __construct(
-        public readonly CustomerSession $customerSession,
-    ){
-    }
 }

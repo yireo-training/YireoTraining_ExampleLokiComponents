@@ -12,10 +12,11 @@ class NotificationRepository extends ComponentRepository
 {
     protected function getData(): mixed
     {
-        echo 'JISSE1';
-        $this->getGlobalMessageRegistry()->addNotice('Hit the buttons');
+        $this->getGlobalMessageRegistry()->addNotice('Hit the global buttons');
 
-        $this->getLocalMessageRegistry()->addNotice($this->component, 'Hit the buttons');
+        if (false === $this->getContext()->isAjax()) {
+            $this->getLocalMessageRegistry()->addNotice($this->component, 'Hit the local buttons');
+        }
 
         return null;
     }
