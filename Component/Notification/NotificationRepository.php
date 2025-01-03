@@ -2,7 +2,6 @@
 
 namespace YireoTraining\ExampleLokiComponents\Component\Notification;
 
-use RuntimeException;
 use YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext;
 use Yireo\LokiComponents\Component\ComponentRepository;
 
@@ -13,6 +12,11 @@ class NotificationRepository extends ComponentRepository
 {
     protected function getData(): mixed
     {
+        echo 'JISSE1';
+        $this->getGlobalMessageRegistry()->addNotice('Hit the buttons');
+
+        $this->getLocalMessageRegistry()->addNotice($this->component, 'Hit the buttons');
+
         return null;
     }
 
