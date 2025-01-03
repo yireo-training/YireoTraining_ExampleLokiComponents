@@ -13,13 +13,13 @@ class LikeRepository extends ComponentRepository
 {
     protected function getData(): mixed
     {
-        return (int)$this->getContext()->customerSession->getLike();
+        return (int)$this->getContext()->getCustomerSession()->getLike();
     }
 
     protected function saveData(mixed $data): void
     {
         $value = (bool)$data;
-        $this->getContext()->customerSession->setLike($value);
+        $this->getContext()->getCustomerSession()->setLike($value);
 
         if ($value) {
             $this->getGlobalMessageRegistry()->addNotice('You liked it');
