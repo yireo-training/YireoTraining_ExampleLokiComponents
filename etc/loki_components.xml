@@ -5,7 +5,6 @@
 
     <component
         name="example-loki-components.like"
-        context="YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Like\LikeViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Like\LikeRepository">
         <filter name="numeric"/>
@@ -13,7 +12,6 @@
 
     <component
         name="example-loki-components.switcher"
-        context="YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Switcher\SwitcherViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Switcher\SwitcherRepository">
         <filter name="numeric"/>
@@ -21,7 +19,6 @@
 
     <group
         name="comments"
-        context="YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Comments\CommentsViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Comments\CommentsRepository"
     />

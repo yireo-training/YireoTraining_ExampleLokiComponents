@@ -2,11 +2,11 @@
 
 namespace YireoTraining\ExampleLokiComponents\Component\Notification;
 
-use YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext;
+use Yireo\LokiComponents\Component\ComponentContext;
 use Yireo\LokiComponents\Component\ComponentRepository;
 
 /**
- * @method GenericContext getContext()
+ * @method ComponentContext getContext()
  */
 class NotificationRepository extends ComponentRepository
 {

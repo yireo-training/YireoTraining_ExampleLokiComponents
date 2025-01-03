@@ -3,17 +3,17 @@
 namespace YireoTraining\ExampleLokiComponents\Component\Comments;
 
 use RuntimeException;
-use YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext;
+use Yireo\LokiComponents\Component\ComponentContext;
 use Yireo\LokiComponents\Component\ComponentRepository;
 
 /**
- * @method GenericContext getContext()
+ * @method ComponentContext getContext()
  */
 class CommentsRepository extends ComponentRepository
 {
     protected function getData(): mixed
     {
-        return (array)$this->getContext()->customerSession->getComments();
+        return (array)$this->getContext()->getCustomerSession()->getComments();
     }
 
     protected function saveData($data): void
@@ -30,7 +30,7 @@ class CommentsRepository extends ComponentRepository
             throw new RuntimeException('No "comment" parameter provided');
         }
 
-        $customerSession = $this->getContext()->customerSession;
+        $customerSession = $this->getContext()->getCustomerSession();
         $comments = (array)$customerSession->getComments();
 
         if ($data['task'] === 'add') {
