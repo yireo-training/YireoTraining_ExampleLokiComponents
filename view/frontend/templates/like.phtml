@@ -2,16 +2,16 @@
 declare(strict_types=1);
 
 use Magento\Framework\View\Element\Template;
-use YireoTraining\ExampleLokiComponents\Component\Like\LikeViewModel;
+use Yireo\LokiComponents\Component\ComponentViewModel;
 use Yireo\LokiComponents\Factory\ViewModelFactory;
 use Yireo\LokiComponents\Util\ComponentUtil;
 
 /** @var Template $block */
 /** @var ViewModelFactory $viewModelFactory */
-/** @var LikeViewModel $viewModel */
+/** @var ComponentViewModel $viewModel */
 /** @var ComponentUtil $componentUtil */
 $componentUtil = $viewModelFactory->create(ComponentUtil::class);
-$viewModel = $block->getViewModel();
+
 ?>
 <div class="my-4">
     <?php if ($viewModel->getValue()): ?>

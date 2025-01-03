@@ -6,6 +6,7 @@
     <component
         name="example-loki-components.like"
         context="YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext"
+        viewModel="YireoTraining\ExampleLokiComponents\Component\Like\LikeViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Like\LikeRepository">
         <filter name="numeric"/>
     </component>

@@ -8,6 +8,7 @@ use Yireo\LokiComponents\Factory\ViewModelFactory;
 /** @var Template $block */
 /** @var BlockRenderer $blockRenderer */
 /** @var ViewModelFactory $viewModelFactory */
+/** Tailwind classes: btn-error, btn-warning, btn-success, btn-notice */
 
 $blockRenderer = $viewModelFactory->create(BlockRenderer::class);
 
@@ -26,7 +27,7 @@ $notifications = [
     <?php foreach ($notifications as $notification): ?>
     <button
         @click="notify"
-        class="m-8 btn btn-<?= $notification['type'] ?>"
+        class="m-8 btn btn-color-[--button-<?= $notification['type'] ?>]"
         data-loki-area="<?= $notification['area'] ?>"
         data-loki-type="<?= $notification['type'] ?>"
         data-loki-text="<?= $notification['text'] ?>">
