@@ -12,14 +12,13 @@ class SwitcherRepository extends ComponentRepository
 {
     protected function getData(): mixed
     {
-        return (int)$this->getContext()->customerSession->getLike();
+        return (int)$this->getContext()->customerSession->getTemplateSwitch();
     }
 
     protected function saveData(mixed $data): void
     {
         $value = (bool)$data;
-        $this->getContext()->customerSession->setLike($value);
-        $msg = $value ? 'You liked it' : 'You did not liked it';
-        $this->getGlobalMessageRegistry()->addSuccess($msg);
+        $this->getContext()->customerSession->setTemplateSwitch($value);
+        $this->getGlobalMessageRegistry()->addSuccess('Toggling template: '.(int)$value);
     }
 }

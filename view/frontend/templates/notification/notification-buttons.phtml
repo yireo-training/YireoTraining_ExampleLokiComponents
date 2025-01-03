@@ -1,0 +1,38 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use Yireo\LokiCheckout\Util\Block\BlockRenderer; // @todo: Move to LokiComponents
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+
+/** @var Template $block */
+/** @var BlockRenderer $blockRenderer */
+/** @var ViewModelFactory $viewModelFactory */
+
+$blockRenderer = $viewModelFactory->create(BlockRenderer::class);
+
+$notifications = [
+    ['area' => 'global', 'type' => 'notice', 'text' => 'Global notice'],
+    ['area' => 'global', 'type' => 'success', 'text' => 'Global success'],
+    ['area' => 'global', 'type' => 'warning', 'text' => 'Global warning'],
+    ['area' => 'global', 'type' => 'error', 'text' => 'Global error'],
+    ['area' => 'local', 'type' => 'notice', 'text' => 'Local notice'],
+    ['area' => 'local', 'type' => 'success', 'text' => 'Local success'],
+    ['area' => 'local', 'type' => 'warning', 'text' => 'Local warning'],
+    ['area' => 'local', 'type' => 'error', 'text' => 'Local error'],
+];
+?>
+<div class="my-4 grid grid-cols-4">
+    <?php foreach ($notifications as $notification): ?>
+    <button
+        @click="notify"
+        class="m-8 btn btn-<?= $notification['type'] ?>"
+        data-loki-area="<?= $notification['area'] ?>"
+        data-loki-type="<?= $notification['type'] ?>"
+        data-loki-text="<?= $notification['text'] ?>">
+        <?= $notification['text'] ?>
+        </button>
+    <?php endforeach; ?>
+
+    <?= $blockRenderer->html('loki-components.utils.local-messages', $block) ?>
+</div>

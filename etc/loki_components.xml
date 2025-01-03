@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Yireo_LokiComponents:etc/loki_components.xsd">
+
     <component name="example-loki-components.random"/>
 
     <component
         name="example-loki-components.like"
         context="YireoTraining\ExampleLokiComponents\Component\Generic\GenericContext"
-        viewModel="YireoTraining\ExampleLokiComponents\Component\Like\LikeViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Like\LikeRepository">
         <filter name="numeric"/>
     </component>
@@ -29,6 +29,7 @@
         name="example-loki-components.comments-add"
         group="comments">
         <target name="example-loki-components.comments-listing"/>
+        <target name="example-loki-components.comments-counter"/>
         <validator name="required"/>
     </component>
 
@@ -41,5 +42,10 @@
     <component
         name="example-loki-components.comments-counter"
         group="comments"
+    />
+
+    <component
+        name="example-loki-components.notification"
+        repository="YireoTraining\ExampleLokiComponents\Component\Notification\NotificationRepository"
     />
 </components>

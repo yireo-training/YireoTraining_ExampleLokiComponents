@@ -20,7 +20,11 @@ class LikeRepository extends ComponentRepository
     {
         $value = (bool)$data;
         $this->getContext()->customerSession->setLike($value);
-        $msg = $value ? 'You liked it' : 'You did not liked it';
-        $this->getGlobalMessageRegistry()->addNotice($msg);
+
+        if ($value) {
+            $this->getGlobalMessageRegistry()->addNotice('You liked it');
+        } else {
+            $this->getGlobalMessageRegistry()->addWarning('You did not like it');
+        }
     }
 }

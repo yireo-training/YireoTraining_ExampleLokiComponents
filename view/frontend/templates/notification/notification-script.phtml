@@ -1,0 +1,17 @@
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('ExampleLokiComponentsNotify', () => ({
+            ...LokiComponentType,
+            notify(event) {
+                const buttonElement = event.target;
+                const data = {
+                    area: buttonElement.getAttribute('data-loki-area'),
+                    type: buttonElement.getAttribute('data-loki-type'),
+                    text: buttonElement.getAttribute('data-loki-text'),
+                };
+
+                this.post(data);
+            }
+        }));
+    });
+</script>

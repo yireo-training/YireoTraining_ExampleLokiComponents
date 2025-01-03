@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <update handle="loki_components"/>
+
+    <body>
+        <referenceContainer name="content">
+            <block name="example-loki-components.notification" template="YireoTraining_ExampleLokiComponents::notification/notification-buttons.phtml">
+                <arguments>
+                    <argument name="js_component_name" xsi:type="string">ExampleLokiComponentsNotify</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="loki-components">
+            <block name="example-loki-components.notification-script" template="YireoTraining_ExampleLokiComponents::notification/notification-script.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
