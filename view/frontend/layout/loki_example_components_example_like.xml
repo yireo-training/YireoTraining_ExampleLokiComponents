@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <update handle="loki_components"/>
+
+    <body>
+        <referenceContainer name="content">
+            <block name="example-loki-components.like" template="YireoTraining_ExampleLokiComponents::like.phtml">
+                <arguments>
+                    <argument name="js_component_name" xsi:type="string">LokiComponentToggle</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

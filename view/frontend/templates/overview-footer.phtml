@@ -1,0 +1,26 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+
+$links = [
+    'random' => 'Random number',
+    'like' => 'Like/Unlike toggle',
+    'switcher' => 'Template toggle',
+    'comments' => 'Comments form and listing',
+    'messages' => 'Messages',
+];
+?>
+<div class="pr-16">
+<h2 class="text-md leading-5 font-semibold uppercase">Loki Components</h2>
+
+<ul class="mt-4">
+    <?php foreach ($links as $linkName => $linkTitle): ?>
+        <li>
+            <a class="text-base leading-10" href="<?= $block->getUrl('loki_example_components/example/'.$linkName) ?>"><?= $linkTitle ?></a>
+        </li>
+    <?php endforeach; ?>
+</ul>
+</div>

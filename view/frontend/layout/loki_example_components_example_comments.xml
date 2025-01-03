@@ -5,14 +5,6 @@
 
     <body>
         <referenceContainer name="content">
-            <block name="example-loki-components.random" template="YireoTraining_ExampleLokiComponents::random.phtml"/>
-
-            <block name="example-loki-components.like" template="YireoTraining_ExampleLokiComponents::like.phtml">
-                <arguments>
-                    <argument name="js_component_name" xsi:type="string">LokiComponentToggle</argument>
-                </arguments>
-            </block>
-
             <block name="example-loki-components.comments-add" template="YireoTraining_ExampleLokiComponents::comments/comments-add.phtml">
                 <arguments>
                     <argument name="js_component_name" xsi:type="string">ExampleLokiComponentsComments</argument>
@@ -26,12 +18,6 @@
             </block>
 
             <block name="example-loki-components.comments-counter" template="YireoTraining_ExampleLokiComponents::comments/comments-counter.phtml"/>
-
-            <block name="example-loki-components.switcher" template="YireoTraining_ExampleLokiComponents::switcher/example1.phtml">
-                <arguments>
-                    <argument name="js_component_name" xsi:type="string">LokiComponentToggle</argument>
-                </arguments>
-            </block>
         </referenceContainer>
 
         <referenceContainer name="loki-components">
