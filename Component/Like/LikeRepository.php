@@ -10,12 +10,12 @@ use Yireo\LokiComponents\Component\ComponentRepository;
  */
 class LikeRepository extends ComponentRepository
 {
-    protected function getData(): mixed
+    protected function getValue(): mixed
     {
         return (int)$this->getContext()->getCustomerSession()->getLike();
     }
 
-    protected function saveData(mixed $data): void
+    protected function saveValue(mixed $data): void
     {
         $value = (bool)$data;
         $this->getContext()->getCustomerSession()->setLike($value);

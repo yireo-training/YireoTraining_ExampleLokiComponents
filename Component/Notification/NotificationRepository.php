@@ -10,7 +10,7 @@ use Yireo\LokiComponents\Component\ComponentRepository;
  */
 class NotificationRepository extends ComponentRepository
 {
-    protected function getData(): mixed
+    protected function getValue(): mixed
     {
         $this->getGlobalMessageRegistry()->addNotice('Hit the global buttons');
 
@@ -21,7 +21,7 @@ class NotificationRepository extends ComponentRepository
         return null;
     }
 
-    protected function saveData(mixed $data): void
+    protected function saveValue(mixed $data): void
     {
         $data = (array)$data;
         if (!isset($data['area']) || !isset($data['type']) || !isset($data['text'])) {
