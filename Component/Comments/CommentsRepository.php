@@ -11,12 +11,12 @@ use Yireo\LokiComponents\Component\ComponentRepository;
  */
 class CommentsRepository extends ComponentRepository
 {
-    protected function getValue(): mixed
+    public function getValue(): mixed
     {
         return (array)$this->getContext()->getCustomerSession()->getComments();
     }
 
-    protected function saveValue($data): void
+    public function saveValue($data): void
     {
         if (false === is_array($data)) {
             throw new RuntimeException('Not an array');

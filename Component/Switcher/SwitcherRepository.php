@@ -10,12 +10,12 @@ use Yireo\LokiComponents\Component\ComponentRepository;
  */
 class SwitcherRepository extends ComponentRepository
 {
-    protected function getValue(): mixed
+    public function getValue(): mixed
     {
         return (int)$this->getContext()->getCustomerSession()->getTemplateSwitch();
     }
 
-    protected function saveValue(mixed $data): void
+    public function saveValue(mixed $data): void
     {
         $value = (bool)$data;
         $this->getContext()->getCustomerSession()->setTemplateSwitch($value);
