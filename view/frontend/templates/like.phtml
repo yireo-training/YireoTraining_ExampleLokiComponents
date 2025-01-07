@@ -3,11 +3,15 @@ declare(strict_types=1);
 
 use Magento\Framework\View\Element\Template;
 use Yireo\LokiComponents\Component\ComponentViewModel;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+use Yireo\LokiComponents\Util\Ajax;
 
 /** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
 /** @var ComponentViewModel $viewModel */
 
-$isAjax = $viewModel->getContext()->isAjax();
+$ajax = $viewModelFactory->create(Ajax::class);
+$isAjax = $ajax->isAjax();
 ?>
 <div class="my-4">
     <?php if ($viewModel->getValue()): ?>

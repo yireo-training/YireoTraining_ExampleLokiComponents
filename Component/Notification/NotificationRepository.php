@@ -4,17 +4,23 @@ namespace YireoTraining\ExampleLokiComponents\Component\Notification;
 
 use Yireo\LokiComponents\Component\ComponentContext;
 use Yireo\LokiComponents\Component\ComponentRepository;
+use Yireo\LokiComponents\Util\Ajax;
 
 /**
  * @method ComponentContext getContext()
  */
 class NotificationRepository extends ComponentRepository
 {
+    public function __construct(
+        private Ajax $ajax
+    ) {
+    }
+
     public function getValue(): mixed
     {
         $this->getGlobalMessageRegistry()->addNotice('Hit the global buttons');
 
-        if (false === $this->getContext()->isAjax()) {
+        if (false === $this->ajax->isAjax()) {
             $this->getLocalMessageRegistry()->addNotice($this->component, 'Hit the local buttons');
         }
 
