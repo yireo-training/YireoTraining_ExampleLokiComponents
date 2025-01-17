@@ -7,14 +7,14 @@
         name="example-loki-components.like"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Like\LikeViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Like\LikeRepository">
-        <filter name="numeric"/>
+        <filter name="number"/>
     </component>
 
     <component
         name="example-loki-components.switcher"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Switcher\SwitcherViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Switcher\SwitcherRepository">
-        <filter name="numeric"/>
+        <filter name="number"/>
     </component>
 
     <group
