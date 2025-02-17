@@ -21,7 +21,7 @@ class NotificationRepository extends ComponentRepository
         $this->getGlobalMessageRegistry()->addNotice('Hit the global buttons');
 
         if (false === $this->ajax->isAjax()) {
-            $this->getLocalMessageRegistry()->addNotice($this->component, 'Hit the local buttons');
+            $this->getLocalMessageRegistry()->addNotice('Hit the local buttons');
         }
 
         return null;
@@ -54,16 +54,16 @@ class NotificationRepository extends ComponentRepository
         if ($data['area'] === 'local') {
             switch ($data['type']) {
                 case 'success':
-                    $this->getLocalMessageRegistry()->addSuccess($this->component, $data['text']);
+                    $this->getLocalMessageRegistry()->addSuccess($data['text']);
                     break;
                 case 'warning':
-                    $this->getLocalMessageRegistry()->addWarning($this->component, $data['text']);
+                    $this->getLocalMessageRegistry()->addWarning($data['text']);
                     break;
                 case 'error':
-                    $this->getLocalMessageRegistry()->addError($this->component, $data['text']);
+                    $this->getLocalMessageRegistry()->addError($data['text']);
                     break;
                 default:
-                    $this->getLocalMessageRegistry()->addNotice($this->component, $data['text']);
+                    $this->getLocalMessageRegistry()->addNotice($data['text']);
                     break;
             }
         }
