@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
-        <route id="loki_example_components" frontName="loki_example_components">
+        <route id="loki_components_example" frontName="loki_components_example">
             <module name="YireoTraining_ExampleLokiComponents"/>
         </route>
     </router>

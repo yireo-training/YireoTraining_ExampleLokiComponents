@@ -13,12 +13,12 @@ $links = [
     'notification' => 'Notifications',
 ];
 ?>
-<h1 class="text-3xl">Yireo Loki Components</h1>
+<h1 class="text-3xl">Yireo Loki Components Examples</h1>
 
 <ul class="list-disc pl-4">
     <?php foreach ($links as $linkName => $linkTitle): ?>
         <li>
-            <a class="hover:text-sky-500" href="<?= $block->getUrl('loki_example_components/example/'.$linkName) ?>"><?= $linkTitle ?></a>
+            <a class="hover:text-sky-500" href="<?= $block->getUrl('loki_components_example/example/'.$linkName) ?>"><?= $linkTitle ?></a>
         </li>
     <?php endforeach; ?>
 </ul>
