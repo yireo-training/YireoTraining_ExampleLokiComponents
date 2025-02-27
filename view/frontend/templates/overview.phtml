@@ -2,23 +2,21 @@
 declare(strict_types=1);
 
 use Magento\Framework\View\Element\Template;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+use YireoTraining\ExampleLokiComponents\ViewModel\ExampleListing;
 
 /** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var ExampleListing $exampleListing */
 
-$links = [
-    'random' => 'Random number',
-    'like' => 'Like/Unlike toggle',
-    'switcher' => 'Template toggle',
-    'comments' => 'Comments form and listing',
-    'notification' => 'Notifications',
-];
+$exampleListing = $viewModelFactory->create(ExampleListing::class);
 ?>
 <h1 class="text-3xl">Yireo Loki Components Examples</h1>
 
 <ul class="list-disc pl-4">
-    <?php foreach ($links as $linkName => $linkTitle): ?>
+    <?php foreach ($exampleListing->getLinks() as $link): ?>
         <li>
-            <a class="hover:text-sky-500" href="<?= $block->getUrl('loki_components_example/example/'.$linkName) ?>"><?= $linkTitle ?></a>
+            <a class="hover:text-sky-500" href="<?= $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
         </li>
     <?php endforeach; ?>
 </ul>

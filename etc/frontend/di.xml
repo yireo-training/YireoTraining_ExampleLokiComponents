@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="\YireoTraining\ExampleLokiComponents\ViewModel\ExampleListing">
+        <arguments>
+            <argument name="links" xsi:type="array">
+                <item name="random" xsi:type="array">
+                    <item name="url" xsi:type="string">loki_components_example/example/random</item>
+                    <item name="label" xsi:type="string">Random number</item>
+                </item>
+                <item name="like" xsi:type="array">
+                    <item name="url" xsi:type="string">loki_components_example/example/like</item>
+                    <item name="label" xsi:type="string">Like/Unlike toggle</item>
+                </item>
+                <item name="switcher" xsi:type="array">
+                    <item name="url" xsi:type="string">loki_components_example/example/switcher</item>
+                    <item name="label" xsi:type="string">Template toggle</item>
+                </item>
+                <item name="comments" xsi:type="array">
+                    <item name="url" xsi:type="string">loki_components_example/example/comments</item>
+                    <item name="label" xsi:type="string">Comments form and listing</item>
+                </item>
+                <item name="notification" xsi:type="array">
+                    <item name="url" xsi:type="string">loki_components_example/example/notification</item>
+                    <item name="label" xsi:type="string">Notifications</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
