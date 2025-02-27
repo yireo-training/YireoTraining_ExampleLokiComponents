@@ -1,20 +1,20 @@
 {
-  "name": "yireo-training/magento2-example-loki-components",
-  "version": "0.0.2",
-  "description": "N/A",
-  "type": "magento2-module",
-  "require": {
-    "magento/framework": "*"
-  },
-  "license": [
-    "OSL-3.0"
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "yireo-training/magento2-example-loki-components",
+    "version": "0.0.2",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*"
+    },
+    "license": [
+        "OSL-3.0"
     ],
-    "psr-4": {
-      "YireoTraining\\ExampleLokiComponents\\": ""
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "YireoTraining\\ExampleLokiComponents\\": ""
+        }
     }
-  }
 }
