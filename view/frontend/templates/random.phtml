@@ -1,4 +1,11 @@
-<div class="my-4">
+<?php
+declare(strict_types=1);
+
+use Yireo\LokiComponents\Util\Block\CssClass;
+
+/** @var CssClass $css */
+?>
+<div class="<?= $css('my-4') ?>">
     Random number: <?= rand() ?><br/>
     <button @click="post" class="btn btn-primary">Refresh</button>
 </div>
