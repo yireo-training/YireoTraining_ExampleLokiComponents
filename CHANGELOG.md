@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.3] - 11 March 2025
+### Fixed
+- POF for LokiMapComponents
+- Huge refactoring to move logic into new LokiFieldComponents
+- Add configurable listing of links
+- Rename URL
+- Update docs
+
 ## [0.0.2] - 22 February 2025
 - Add README
 - Add TODO file for site building
