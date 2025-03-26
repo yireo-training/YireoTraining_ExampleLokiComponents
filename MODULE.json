@@ -1,0 +1,16 @@
+{
+    "modules": [
+        "Yireo_LokiComponents"
+    ],
+    "components": [
+        "example-loki-components.random",
+        "example-loki-components.like",
+        "example-loki-components.switcher",
+        "comments",
+        "example-loki-components.comments-add",
+        "example-loki-components.comments-listing",
+        "example-loki-components.comments-counter",
+        "example-loki-components.notification"
+    ],
+    "config": []
+}
