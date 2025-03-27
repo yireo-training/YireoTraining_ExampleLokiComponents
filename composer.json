@@ -2,6 +2,7 @@
     "name": "yireo-training/magento2-example-loki-components",
     "version": "0.0.3",
     "description": "N/A",
+    "keywords": ["loki-example"],
     "type": "magento2-module",
     "require": {
         "magento/framework": "*"
