@@ -11,12 +11,14 @@ use YireoTraining\ExampleLokiComponents\ViewModel\ExampleListing;
 
 $exampleListing = $viewModelFactory->create(ExampleListing::class);
 ?>
-<h1 class="text-3xl">Yireo Loki Components Examples</h1>
+<div class="loki">
+    <h1 class="text-3xl">Yireo Loki Components Examples</h1>
 
-<ul class="list-disc pl-4">
-    <?php foreach ($exampleListing->getLinks() as $link): ?>
-        <li>
-            <a class="hover:text-sky-500" href="<?= $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
-        </li>
-    <?php endforeach; ?>
-</ul>
+    <ul class="list-disc pl-4">
+        <?php foreach ($exampleListing->getLinks() as $link): ?>
+            <li>
+                <a class="hover:text-sky-500" href="<?= $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

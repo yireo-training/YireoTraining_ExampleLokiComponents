@@ -11,14 +11,16 @@ use YireoTraining\ExampleLokiComponents\ViewModel\ExampleListing;
 
 $exampleListing = $viewModelFactory->create(ExampleListing::class);
 ?>
-<div class="pr-16">
-    <h2 class="text-md leading-5 font-semibold uppercase">Loki Components</h2>
+<div class="loki">
+    <div class="pr-16">
+        <h2 class="text-md leading-5 font-semibold uppercase">Loki Components</h2>
 
-    <ul class="mt-4">
-        <?php foreach ($exampleListing->getLinks() as $link): ?>
-            <li>
-                <a class="text-base leading-10" href="<?= $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+        <ul class="mt-4">
+            <?php foreach ($exampleListing->getLinks() as $link): ?>
+                <li>
+                    <a class="text-base leading-10" href="<?= $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
 </div>
