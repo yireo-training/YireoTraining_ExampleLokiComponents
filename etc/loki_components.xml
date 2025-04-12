@@ -3,6 +3,8 @@
 
     <component name="example-loki-components.random"/>
 
+    <component name="example-loki-components.modal"/>
+
     <component
         name="example-loki-components.like"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Like\LikeViewModel"

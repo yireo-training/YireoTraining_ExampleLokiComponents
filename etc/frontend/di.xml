@@ -19,6 +19,10 @@
                     <item name="url" xsi:type="string">loki_components_example/example/comments</item>
                     <item name="label" xsi:type="string">Comments form and listing</item>
                 </item>
+                <item name="modal" xsi:type="array">
+                    <item name="url" xsi:type="string">loki_components_example/example/modal</item>
+                    <item name="label" xsi:type="string">Modal popup</item>
+                </item>
                 <item name="notification" xsi:type="array">
                     <item name="url" xsi:type="string">loki_components_example/example/notification</item>
                     <item name="label" xsi:type="string">Notifications</item>
