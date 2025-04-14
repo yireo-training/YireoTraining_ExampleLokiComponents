@@ -4,23 +4,30 @@ declare(strict_types=1);
 use Magento\Framework\View\Element\Template;
 use Yireo\LokiComponents\Component\ComponentViewModel;
 use Yireo\LokiComponents\Factory\ViewModelFactory;
-use Yireo\LokiComponents\Util\Ajax;
+use Yireo\LokiFieldComponents\ViewModel\ImageOutput;
 
 /** @var Template $block */
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ComponentViewModel $viewModel */
-
-$ajax = $viewModelFactory->create(Ajax::class);
-$isAjax = $ajax->isAjax();
+/** @var ImageOutput */
+$imageOutput = $viewModelFactory->create(ImageOutput::class);
 ?>
 <div class="my-4">
-    <?php if ($viewModel->getValue()): ?>
-        <button @click="toggle" class="btn btn-primary" <?php if ($isAjax): ?>x-autofocus<?php endif; ?>>
-            Unlike
-        </button>
-    <?php else: ?>
-        <button @click="toggle" class="btn btn-primary" <?php if ($isAjax): ?>x-autofocus<?php endif; ?>>
-            Like
-        </button>
-    <?php endif; ?>
+    <p>Value: <span x-html="value"></span></p>
+
+    <button @click="toggleModal" class="btn btn-primary" :disabled="isModalOpen">
+        <span x-cloak x-show="isModalOpen">Close Modal</span>
+        <span x-show="isModalClosed">Open Modal</span>
+    </button>
+
+    <dialog x-ref="modal" class="bg-white border border-zinc-400 rounded-lg p-4">
+        <div>
+            <button @click="toggleModal" class="float-right cursor-pointer w-4">
+                <?= $imageOutput->get('Yireo_LokiComponents::images/xmark.svg') ?>
+            </button>
+
+            <p class="my-4">Input your text here</p>
+            <input type="text" x-model="value" class="form-input"/>
+        </div>
+    </dialog>
 </div>
