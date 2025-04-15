@@ -20,7 +20,7 @@ $imageOutput = $viewModelFactory->create(ImageOutput::class);
         <span x-show="isModalClosed">Open Modal</span>
     </button>
 
-    <dialog x-ref="modal" class="bg-white border border-zinc-400 rounded-lg p-4">
+    <dialog x-ref="modal" class="border border-zinc-400 rounded-lg px-4 pb-4">
         <div>
             <button @click="toggleModal" class="float-right cursor-pointer w-4">
                 <?= $imageOutput->get('Yireo_LokiComponents::images/xmark.svg') ?>
