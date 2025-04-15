@@ -7,13 +7,9 @@
         <referenceContainer name="content">
             <block name="example-loki-components.modal" template="YireoTraining_ExampleLokiComponents::modal.phtml">
                 <arguments>
-                    <argument name="js_component_name" xsi:type="string">ExampleLokiModalComponent</argument>
+                    <argument name="js_component_name" xsi:type="string">LokiModal</argument>
                 </arguments>
             </block>
-        </referenceContainer>
-
-        <referenceContainer name="loki-components">
-            <block name="example-loki-components.modal-component" template="YireoTraining_ExampleLokiComponents::modal/modal-component.phtml"/>
         </referenceContainer>
     </body>
 </page>
