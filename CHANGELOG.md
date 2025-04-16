@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.5] - 16 April 2025
+### Fixed
+- Chop up modal into regular component, Loki Component and component partial
+- Complete modal example
+
 ## [0.0.4] - 09 April 2025
 ### Fixed
 - Additional styling via Tailwind
