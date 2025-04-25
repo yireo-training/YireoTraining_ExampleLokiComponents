@@ -27,7 +27,7 @@ $imageOutput = $viewModelFactory->create(ImageOutput::class);
             </button>
 
             <p class="my-4">Input your text here</p>
-            <input type="text" x-model="value" class="form-input"/>
+            <input type="text" :value="value" @change="setValue" class="form-input"/>
         </div>
     </dialog>
 </div>

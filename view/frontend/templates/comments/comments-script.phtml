@@ -3,6 +3,9 @@
         Alpine.data('ExampleLokiComponentsComments', () => ({
             ...LokiComponentType,
             newComment: '',
+            setNewComment(event) {
+                this.newComment = event.target.value;
+            },
             add(event) {
                 this.post({
                     task: 'add',

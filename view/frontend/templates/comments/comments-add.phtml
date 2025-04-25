@@ -6,6 +6,6 @@ use Magento\Framework\View\Element\Template;
 /** @var Template $block */
 ?>
 <div>
-    <input aria-label="Comment text" x-model="newComment" required/>
+    <input aria-label="Comment text" x-text="newComment" @change="setNewComment" required/>
     <button @click="add" class="mt-4 btn btn-primary">Add comment</button>
 </div>
