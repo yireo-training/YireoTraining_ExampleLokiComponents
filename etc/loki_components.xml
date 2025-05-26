@@ -48,4 +48,9 @@
         name="example-loki-components.notification"
         repository="YireoTraining\ExampleLokiComponents\Component\Notification\NotificationRepository"
     />
+
+    <component
+        name="example-loki-components.exception-test"
+        repository="YireoTraining\ExampleLokiComponents\Component\ExceptionTest\ExceptionTestRepository">
+    </component>
 </components>

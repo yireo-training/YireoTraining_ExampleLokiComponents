@@ -27,6 +27,10 @@
                     <item name="url" xsi:type="string">loki_components_example/example/notification</item>
                     <item name="label" xsi:type="string">Notifications</item>
                 </item>
+                <item name="exception_test" xsi:type="array">
+                    <item name="url" xsi:type="string">loki_components_example/example/exception_test</item>
+                    <item name="label" xsi:type="string">Exception test</item>
+                </item>
             </argument>
         </arguments>
     </type>
