@@ -1,0 +1,33 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use Yireo\LokiComponents\Component\ComponentViewModel;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+use Yireo\LokiFieldComponents\ViewModel\ImageOutput;
+
+/** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var ComponentViewModel $viewModel */
+/** @var ImageOutput */
+$imageOutput = $viewModelFactory->create(ImageOutput::class);
+?>
+<div class="my-4">
+    <p>Value: <span x-html="value"></span></p>
+
+    <button @click="toggleModal" class="btn btn-primary" :disabled="isModalOpen">
+        <span x-cloak x-show="isModalOpen">Close Simple Modal</span>
+        <span x-show="isModalClosed">Open Simple Modal</span>
+    </button>
+
+    <dialog x-ref="modal" class="border border-zinc-400 rounded-lg px-4 pb-4">
+        <div>
+            <button @click="toggleModal" class="float-right cursor-pointer w-4">
+                <?= $imageOutput->get('Yireo_LokiComponents::images/xmark.svg') ?>
+            </button>
+
+            <p class="my-4">Input your text here</p>
+            <input type="text" :value="value" @change="setValue" class="form-input"/>
+        </div>
+    </dialog>
+</div>

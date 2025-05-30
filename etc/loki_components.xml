@@ -3,7 +3,10 @@
 
     <component name="example-loki-components.random"/>
 
-    <component name="example-loki-components.modal"/>
+    <component name="example-loki-components.modal.modal1"/>
+    <component name="example-loki-components.modal.modal2"/>
+    <component name="example-loki-components.modal.modal3"/>
+    <component name="example-loki-components.modal.modal4"/>
 
     <component
         name="example-loki-components.like"
