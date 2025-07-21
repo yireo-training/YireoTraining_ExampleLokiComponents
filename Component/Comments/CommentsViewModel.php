@@ -2,7 +2,7 @@
 
 namespace YireoTraining\ExampleLokiComponents\Component\Comments;
 
-use Yireo\LokiComponents\Component\ComponentViewModel;
+use Loki\Components\Component\ComponentViewModel;
 
 class CommentsViewModel extends ComponentViewModel
 {

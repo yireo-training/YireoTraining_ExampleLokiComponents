@@ -2,9 +2,9 @@
 
 namespace YireoTraining\ExampleLokiComponents\Component\Notification;
 
-use Yireo\LokiComponents\Component\ComponentContext;
-use Yireo\LokiComponents\Component\ComponentRepository;
-use Yireo\LokiComponents\Util\Ajax;
+use Loki\Components\Component\ComponentContext;
+use Loki\Components\Component\ComponentRepository;
+use Loki\Components\Util\Ajax;
 
 /**
  * @method ComponentContext getContext()

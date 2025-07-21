@@ -2,7 +2,7 @@
 
 namespace YireoTraining\ExampleLokiComponents\Component\Switcher;
 
-use Yireo\LokiComponents\Component\ComponentViewModel;
+use Loki\Components\Component\ComponentViewModel;
 
 class SwitcherViewModel extends ComponentViewModel
 {

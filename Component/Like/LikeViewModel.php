@@ -2,7 +2,7 @@
 
 namespace YireoTraining\ExampleLokiComponents\Component\Like;
 
-use Yireo\LokiComponents\Component\ComponentViewModel;
+use Loki\Components\Component\ComponentViewModel;
 
 class LikeViewModel extends ComponentViewModel
 {

@@ -3,8 +3,8 @@
 namespace YireoTraining\ExampleLokiComponents\Component\Comments;
 
 use RuntimeException;
-use Yireo\LokiComponents\Component\ComponentContext;
-use Yireo\LokiComponents\Component\ComponentRepository;
+use Loki\Components\Component\ComponentContext;
+use Loki\Components\Component\ComponentRepository;
 
 /**
  * @method ComponentContext getContext()

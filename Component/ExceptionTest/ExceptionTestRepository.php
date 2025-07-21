@@ -3,7 +3,7 @@
 namespace YireoTraining\ExampleLokiComponents\Component\ExceptionTest;
 
 use RuntimeException;
-use Yireo\LokiComponents\Component\ComponentRepository;
+use Loki\Components\Component\ComponentRepository;
 
 class ExceptionTestRepository extends ComponentRepository
 {
