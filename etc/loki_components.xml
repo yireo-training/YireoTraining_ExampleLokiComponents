@@ -24,6 +24,7 @@
 
     <group
         name="comments"
+        context="Loki\Components\Component\ComponentContext"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Comments\CommentsViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Comments\CommentsRepository"
     />
