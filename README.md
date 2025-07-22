@@ -4,7 +4,7 @@
 LokiCheckout extension suite for Magento 2.**
 
 You can use this module without the requirement of having the LokiCheckout. This module only depends upon the free
-`Yireo_LokiComponents` module.
+`Loki_Components` module.
 
 ## Installation
 Install this package via composer (assuming you have setup the `composer.yireo.com` repository correctly already):
