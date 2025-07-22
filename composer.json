@@ -5,7 +5,8 @@
     "keywords": ["loki-example"],
     "type": "magento2-module",
     "require": {
-        "magento/framework": "*"
+        "magento/framework": "*",
+        "loki/magento2-components": "^2.0"
     },
     "license": [
         "OSL-3.0"
