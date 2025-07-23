@@ -5,7 +5,7 @@
 
     <body>
         <referenceContainer name="content">
-            <block name="example-loki-components.exception-test" template="YireoTraining_ExampleLokiComponents::exception-test.phtml"/>
+            <block name="example-loki-components.exceptions" template="YireoTraining_ExampleLokiComponents::exceptions.phtml"/>
         </referenceContainer>
     </body>
 </page>

@@ -54,7 +54,7 @@
     />
 
     <component
-        name="example-loki-components.exception-test"
+        name="example-loki-components.exceptions"
         repository="YireoTraining\ExampleLokiComponents\Component\ExceptionTest\ExceptionTestRepository">
     </component>
 </components>
