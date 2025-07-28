@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.9] - 28 July 2025
+### Fixed
+- Set page layout of demo pages to 1column
+
 ## [0.0.8] - 24 July 2025
 ### Fixed
 - Fix exception example
