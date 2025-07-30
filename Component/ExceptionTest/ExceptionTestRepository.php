@@ -14,6 +14,11 @@ class ExceptionTestRepository extends ComponentRepository
 
     public function saveValue($value): void
     {
-        throw new RuntimeException('This exception was thrown in the ExceptionTestRepository');
+        $customerSession = $this->getContext()->getCustomerSession();
+        $exceptionCounter = (int)$customerSession->getExceptionCounter();
+        $exceptionCounter++;
+        $customerSession->setExceptionCounter($exceptionCounter);
+
+        throw new RuntimeException('This exception was thrown in the ExceptionTestRepository: '.$exceptionCounter);
     }
 }
