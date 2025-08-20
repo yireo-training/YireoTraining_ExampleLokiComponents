@@ -15,14 +15,20 @@ use YireoTraining\ExampleLokiComponents\ViewModel\ExampleListing;
 
 $exampleListing = $viewModelFactory->create(ExampleListing::class);
 ?>
-<div class="<?= /* @noEscape */ $css('loki', '@todo') ?>">
-    <div class="<?= /* @noEscape */ $css('pr-16', '@todo') ?>">
-        <h2 class="<?= /* @noEscape */ $css('text-md leading-5 font-semibold uppercase', '@todo') ?>">Loki Components</h2>
+<div class="<?= /* @noEscape */ $css('loki') ?>">
+    <div class="<?= /* @noEscape */ $css('pr-16', 'inner') ?>">
+        <h2 class="<?= /* @noEscape */ $css('text-md leading-5 font-semibold uppercase', 'header') ?>">
+            Loki Components
+        </h2>
 
-        <ul class="<?= /* @noEscape */ $css('mt-4', '@todo') ?>">
+        <ul class="<?= /* @noEscape */ $css('mt-4', 'listing') ?>">
             <?php foreach ($exampleListing->getLinks() as $link): ?>
                 <li>
-                    <a class="<?= /* @noEscape */ $css('text-base leading-10', '@todo') ?>" href="<?= /* @noEscape */ $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
+                    <a
+                        class="<?= /* @noEscape */ $css('text-base leading-10', 'anchor') ?>"
+                        href="<?= /* @noEscape */ $block->getUrl($link['url']) ?>">
+                        <?= $link['label'] ?>
+                    </a>
                 </li>
             <?php endforeach; ?>
         </ul>
