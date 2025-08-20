@@ -12,8 +12,8 @@ use Loki\Components\Factory\ViewModelFactory;
 /** @var ComponentViewModel $viewModel */
 
 ?>
-<div class="my-4">
-        <button @click="post" class="btn btn-primary">
+<div class="<?= $css('my-4', '@todo') ?>">
+        <button @click="post" class="<?= $css('btn btn-primary', '@todo') ?>">
             Exception test
         </button>
 </div>

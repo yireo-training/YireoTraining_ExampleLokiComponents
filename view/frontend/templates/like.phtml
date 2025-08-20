@@ -15,13 +15,13 @@ use Loki\Components\Util\Ajax;
 $ajax = $viewModelFactory->create(Ajax::class);
 $isAjax = $ajax->isAjax();
 ?>
-<div class="my-4">
+<div class="<?= $css('my-4', '@todo') ?>">
     <?php if ($viewModel->getValue()): ?>
-        <button @click="toggle" class="btn btn-primary" <?php if ($isAjax): ?>x-autofocus<?php endif; ?>>
+        <button @click="toggle" class="<?= $css('btn btn-primary', '@todo') ?>" <?php if ($isAjax): ?>x-autofocus<?php endif; ?>>
             Unlike
         </button>
     <?php else: ?>
-        <button @click="toggle" class="btn btn-primary" <?php if ($isAjax): ?>x-autofocus<?php endif; ?>>
+        <button @click="toggle" class="<?= $css('btn btn-primary', '@todo') ?>" <?php if ($isAjax): ?>x-autofocus<?php endif; ?>>
             Like
         </button>
     <?php endif; ?>

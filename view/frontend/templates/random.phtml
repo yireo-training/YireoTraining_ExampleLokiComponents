@@ -3,8 +3,12 @@ declare(strict_types=1);
 
 /** @version 0.0.10 */
 
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\Escaper;
 use Loki\Components\Util\Block\CssClass;
 
+/** @var Template $block */
+/** @var Escaper $escaper */
 /** @var CssClass $css */
 ?>
 <div class="<?= /* @noEscape */

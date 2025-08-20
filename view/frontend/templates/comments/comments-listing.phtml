@@ -3,21 +3,23 @@ declare(strict_types=1);
 
 /** @version 0.0.10 */
 
+use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 use YireoTraining\ExampleLokiComponents\Component\Comments\CommentsViewModel;
 use Loki\Components\Util\ComponentUtil;
 
+/** @var Escaper $escaper */
 /** @var Template $block */
 /** @var CommentsViewModel $viewModel */
 /** @var ComponentUtil $componentUtil */
 ?>
-<div class="my-4">
-    <h3 class="text-xl">Existing Comments</h3>
+<div class="<?= $css('my-4', '@todo') ?>">
+    <h3 class="<?= $css('text-xl', '@todo') ?>">Existing Comments</h3>
     <ul>
         <?php foreach ($viewModel->getComments() as $comment) : ?>
             <li>
                 <?= $escaper->escapeHtml($comment) ?>
-                <button class="btn w-3" @click="remove" data-comment="<?= $escaper->escapeHtml($comment) ?>">x</button>
+                <button class="<?= $css('btn w-3', '@todo') ?>" @click="remove" data-comment="<?= $escaper->escapeHtml($comment) ?>">x</button>
             </li>
         <?php endforeach; ?>
     </ul>

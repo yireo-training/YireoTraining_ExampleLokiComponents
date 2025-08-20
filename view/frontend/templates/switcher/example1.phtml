@@ -3,13 +3,15 @@ declare(strict_types=1);
 
 /** @version 0.0.1 */
 
+use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 
+/** @var Escaper $escaper */
 /** @var Template $block */
 ?>
-<div class="my-4">
+<div class="<?= $css('my-4', '@todo') ?>">
     Current template: <code><?= $escaper->escapeHtml($block->getTemplate()) ?></code>
-    <button @click="toggle" class="btn btn-primary">
+    <button @click="toggle" class="<?= $css('btn btn-primary', '@todo') ?>">
         Switch to <code>example2.phtml</code>
     </button>
 </div>

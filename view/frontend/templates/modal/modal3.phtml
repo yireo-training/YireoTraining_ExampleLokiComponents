@@ -3,35 +3,37 @@ declare(strict_types=1);
 
 /** @version 0.0.10 */
 
+use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 use Loki\Components\Component\ComponentViewModel;
 use Loki\Components\Factory\ViewModelFactory;
 use Loki\Field\ViewModel\ImageOutput;
 
+/** @var Escaper $escaper */
 /** @var Template $block */
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ComponentViewModel $viewModel */
 /** @var ImageOutput */
 $imageOutput = $viewModelFactory->create(ImageOutput::class);
 ?>
-<div class="my-4">
+<div class="<?= $css('my-4', '@todo') ?>">
     <p>Value: <span x-html="value"></span></p>
 
-    <button @click="toggleModal" class="btn btn-primary" :disabled="isModalOpen">
+    <button @click="toggleModal" class="<?= $css('btn btn-primary', '@todo') ?>" :disabled="isModalOpen">
         <span x-cloak x-show="isModalOpen">Close Drawer Left</span>
         <span x-show="isModalClosed">Open Drawer Left</span>
     </button>
 
-    <dialog x-ref="modal" class="modal3 relative bg-inherit m-0 w-full h-full">
-        <div class="bg-white w-1/2 h-full p-10">
-            <button @click="toggleModal" class="float-right cursor-pointer w-4">
+    <dialog x-ref="modal" class="<?= $css('modal3 relative bg-inherit m-0 w-full h-full', '@todo') ?>">
+        <div class="<?= $css('bg-white w-1/2 h-full p-10', '@todo') ?>">
+            <button @click="toggleModal" class="<?= $css('float-right cursor-pointer w-4', '@todo') ?>">
                 <?= $escaper->escapeHtml($imageOutput->get('Loki_Components::images/xmark.svg')) ?>
             </button>
 
-            <p class="my-4">Input your text here</p>
-            <input type="text" :value="value" @change="setValue" class="form-input"/>
+            <p class="<?= $css('my-4', '@todo') ?>">Input your text here</p>
+            <input type="text" :value="value" @change="setValue" class="<?= $css('form-input', '@todo') ?>"/>
 
-            <button @click="toggleModal" class="btn btn-primary mt-4">
+            <button @click="toggleModal" class="<?= $css('btn btn-primary mt-4', '@todo') ?>">
                 <span>Close Drawer</span>
             </button>
         </div>
