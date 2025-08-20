@@ -45,7 +45,7 @@ $imageOutput = $viewModelFactory->create(ImageOutput::class);
                 class="<?= /* noEscape */
                 /* @noEscape */ $css('float-right cursor-pointer w-4', 'dialog-button') ?>"
             >
-                <?= $escaper->escapeHtml($imageOutput->get('Loki_Components::images/xmark.svg')) ?>
+                <?= /* @noEscape */ $imageOutput->get('Loki_Components::images/xmark.svg') ?>
             </button>
 
             <p class="<?= /* noEscape */
