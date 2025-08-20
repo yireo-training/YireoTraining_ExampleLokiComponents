@@ -9,11 +9,9 @@ use Magento\Framework\View\Element\Template;
 /** @var Escaper $escaper */
 /** @var Template $block */
 ?>
-<div class="<?= /* @noEscape */
-$css('my-4', '@todo') ?>">
+<div class="<?= /* @noEscape */ $css('my-4', '@todo') ?>">
     Current template: <code><?= $escaper->escapeHtml($block->getTemplate()) ?></code>
-    <button @click="toggle" class="<?= /* @noEscape */
-$css('btn btn-primary', '@todo') ?>">
+    <button @click="toggle" class="<?= /* @noEscape */ $css('btn btn-primary', '@todo') ?>">
         Switch to <code>example2.phtml</code>
     </button>
 </div>

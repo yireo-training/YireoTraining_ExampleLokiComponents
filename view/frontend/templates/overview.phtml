@@ -13,17 +13,13 @@ use YireoTraining\ExampleLokiComponents\ViewModel\ExampleListing;
 
 $exampleListing = $viewModelFactory->create(ExampleListing::class);
 ?>
-<div class="<?= /* @noEscape */
-$css('loki', '@todo') ?>">
-    <h1 class="<?= /* @noEscape */
-$css('text-3xl', '@todo') ?>">Yireo Loki Components Examples</h1>
+<div class="<?= /* @noEscape */ $css('loki', '@todo') ?>">
+    <h1 class="<?= /* @noEscape */ $css('text-3xl', '@todo') ?>">Yireo Loki Components Examples</h1>
 
-    <ul class="<?= /* @noEscape */
-$css('list-disc pl-4', '@todo') ?>">
+    <ul class="<?= /* @noEscape */ $css('list-disc pl-4', '@todo') ?>">
         <?php foreach ($exampleListing->getLinks() as $link): ?>
             <li>
-                <a class="<?= /* @noEscape */
-$css('hover:text-sky-500', '@todo') ?>" href="<?= /* @noEscape */ $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
+                <a class="<?= /* @noEscape */ $css('hover:text-sky-500', '@todo') ?>" href="<?= /* @noEscape */ $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

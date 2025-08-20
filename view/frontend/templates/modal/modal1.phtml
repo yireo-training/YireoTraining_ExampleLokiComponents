@@ -20,15 +20,13 @@ use Loki\Field\ViewModel\ImageOutput;
 $imageOutput = $viewModelFactory->create(ImageOutput::class);
 ?>
 <div class="<?= /* noEscape */
-/* @noEscape */
-$css('my-4') ?>">
+/* @noEscape */ $css('my-4') ?>">
     <p>Value: <span x-html="value"></span></p>
 
     <button
         @click="toggleModal"
         class="<?= /* noEscape */
-/* @noEscape */
-$css('btn btn-primary', 'button') ?>"
+/* @noEscape */ $css('btn btn-primary', 'button') ?>"
         :disabled="isModalOpen"
     >
         <span x-cloak x-show="isModalOpen">Close Simple Modal</span>
@@ -38,22 +36,19 @@ $css('btn btn-primary', 'button') ?>"
     <dialog
         x-ref="modal"
         class="<?= /* noEscape */
-/* @noEscape */
-$css('border border-zinc-400 rounded-lg px-4 pb-4', 'dialog') ?>"
+/* @noEscape */ $css('border border-zinc-400 rounded-lg px-4 pb-4', 'dialog') ?>"
     >
         <div>
             <button
                 @click="toggleModal"
                 class="<?= /* noEscape */
-/* @noEscape */
-$css('float-right cursor-pointer w-4', 'close-button') ?>"
+/* @noEscape */ $css('float-right cursor-pointer w-4', 'close-button') ?>"
             >
                 <?= $escaper->escapeHtml($imageOutput->get('Loki_Components::images/xmark.svg')) ?>
             </button>
 
             <p class="<?= /* noEscape */
-/* @noEscape */
-$css('my-4', 'dialog-content') ?>">
+/* @noEscape */ $css('my-4', 'dialog-content') ?>">
                 Input your text here
             </p>
 
@@ -62,8 +57,7 @@ $css('my-4', 'dialog-content') ?>">
                 :value="value"
                 @change="setValue"
                 class="<?= /* noEscape */
-/* @noEscape */
-$css('form-input', 'dialog-input') ?>"
+/* @noEscape */ $css('form-input', 'dialog-input') ?>"
             />
         </div>
     </dialog>

@@ -17,15 +17,13 @@ use Loki\Field\ViewModel\ImageOutput;
 $imageOutput = $viewModelFactory->create(ImageOutput::class);
 ?>
 <div class="<?= /* noEscape */
-/* @noEscape */
-$css('my-4') ?>">
+/* @noEscape */ $css('my-4') ?>">
     <p>Value: <span x-html="value"></span></p>
 
     <button
         @click="toggleModal"
         class="<?= /* noEscape */
-/* @noEscape */
-$css('btn btn-primary', 'button') ?>"
+/* @noEscape */ $css('btn btn-primary', 'button') ?>"
         :disabled="isModalOpen">
         <span x-cloak x-show="isModalOpen">Close Drawer Right</span>
         <span x-show="isModalClosed">Open Drawer Right</span>
@@ -34,24 +32,20 @@ $css('btn btn-primary', 'button') ?>"
     <dialog
         x-ref="modal"
         class="<?= /* noEscape */
-/* @noEscape */
-$css('modal4 relative bg-inherit m-0 w-full h-full inset-0', 'dialog') ?>"
+/* @noEscape */ $css('modal4 relative bg-inherit m-0 w-full h-full inset-0', 'dialog') ?>"
     >
         <div class="<?= /* noEscape */
-/* @noEscape */
-$css('modal-inner bg-white w-1/4 h-full fixed right-0 p-10', 'dialog-inner') ?>">
+/* @noEscape */ $css('modal-inner bg-white w-1/4 h-full fixed right-0 p-10', 'dialog-inner') ?>">
             <button
                 @click="toggleModal"
                 class="<?= /* noEscape */
-/* @noEscape */
-$css('float-right cursor-pointer w-4', 'close-button') ?>"
+/* @noEscape */ $css('float-right cursor-pointer w-4', 'close-button') ?>"
             >
                 <?= $escaper->escapeHtml($imageOutput->get('Loki_Components::images/xmark.svg')) ?>
             </button>
 
             <p class="<?= /* noEscape */
-/* @noEscape */
-$css('my-4', 'dialog-content') ?>">
+/* @noEscape */ $css('my-4', 'dialog-content') ?>">
                 Input your text here
             </p>
 
@@ -60,15 +54,13 @@ $css('my-4', 'dialog-content') ?>">
                 :value="value"
                 @change="setValue"
                 class="<?= /* noEscape */
-/* @noEscape */
-$css('form-input', 'dialog-input') ?>"
+/* @noEscape */ $css('form-input', 'dialog-input') ?>"
             />
 
             <button
                 @click="toggleModal"
                 class="<?= /* noEscape */
-/* @noEscape */
-$css('btn btn-primary mt-4', 'dialog-button') ?>"
+/* @noEscape */ $css('btn btn-primary mt-4', 'dialog-button') ?>"
             >
                 <span>Close Drawer</span>
             </button>
