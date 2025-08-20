@@ -20,8 +20,7 @@ $exampleListing = $viewModelFactory->create(ExampleListing::class);
         <ul class="<?= $css('mt-4', '@todo') ?>">
             <?php foreach ($exampleListing->getLinks() as $link): ?>
                 <li>
-                    <a class="<?= $css('text-base leading-10', '@todo') ?>" href="<?= /* @noEscape */
-$block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
+                    <a class="<?= $css('text-base leading-10', '@todo') ?>" href="<?= /* @noEscape */ $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
                 </li>
             <?php endforeach; ?>
         </ul>

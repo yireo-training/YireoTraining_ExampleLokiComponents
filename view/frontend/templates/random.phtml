@@ -11,8 +11,7 @@ use Loki\Components\Util\Block\CssClass;
 /** @var Escaper $escaper */
 /** @var CssClass $css */
 ?>
-<div class="<?= /* @noEscape */
-$css('my-4') ?>">
+<div class="<?= /* @noEscape */ $css('my-4') ?>">
     Random number: <?= $escaper->escapeHtml(rand()) ?><br/>
     <button @click="post" class="btn btn-primary">Refresh</button>
 </div>
