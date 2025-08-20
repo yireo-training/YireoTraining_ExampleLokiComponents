@@ -25,7 +25,8 @@ $notifications = [
     ['area' => 'local', 'type' => 'error', 'text' => 'Local error'],
 ];
 ?>
-<div class="<?= $css('my-4 grid grid-cols-4', '@todo') ?>">
+<div class="<?= /* @noEscape */
+$css('my-4 grid grid-cols-4', '@todo') ?>">
     <?php foreach ($notifications as $notification): ?>
     <button
         @click="notify"
