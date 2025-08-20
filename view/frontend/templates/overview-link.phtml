@@ -7,4 +7,5 @@ use Magento\Framework\View\Element\Template;
 
 /** @var Template $block */
 ?>
-<a href="<?= $block->getUrl('loki_components_example/example/index') ?>">See Loki Component examples</a>
+<a href="<?= /* @noEscape */
+$block->getUrl('loki_components_example/example/index') ?>">See Loki Component examples</a>

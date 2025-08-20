@@ -16,8 +16,8 @@ use Loki\Components\Util\ComponentUtil;
     <ul>
         <?php foreach ($viewModel->getComments() as $comment) : ?>
             <li>
-                <?= $comment ?>
-                <button class="btn w-3" @click="remove" data-comment="<?= $comment ?>">x</button>
+                <?= $escaper->escapeHtml($comment) ?>
+                <button class="btn w-3" @click="remove" data-comment="<?= $escaper->escapeHtml($comment) ?>">x</button>
             </li>
         <?php endforeach; ?>
     </ul>

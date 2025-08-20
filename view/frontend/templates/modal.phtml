@@ -10,5 +10,6 @@ use Magento\Framework\View\Element\Template;
 <div class="my-4">
     <h1>Modal examples</h1>
 
-    <?= $block->getChildHtml() ?>
+    <?= /* @noEscape */
+$block->getChildHtml() ?>
 </div>

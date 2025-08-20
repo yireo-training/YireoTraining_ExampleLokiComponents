@@ -12,5 +12,5 @@ use Loki\Components\Util\ComponentUtil;
 /** @var ComponentUtil $componentUtil */
 ?>
 <div>
-    Comments counter: <?= count($viewModel->getComments()) ?>
+    Comments counter: <?= $escaper->escapeHtml(count($viewModel->getComments())) ?>
 </div>

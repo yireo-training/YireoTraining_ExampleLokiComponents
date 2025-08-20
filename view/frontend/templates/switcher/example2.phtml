@@ -8,7 +8,7 @@ use Magento\Framework\View\Element\Template;
 /** @var Template $block */
 ?>
 <div class="my-4">
-    Current template: <code><?= $block->getTemplate() ?></code>
+    Current template: <code><?= $escaper->escapeHtml($block->getTemplate()) ?></code>
     <button @click="toggle" class="btn btn-primary">
         Switch to <code>example1.phtml</code>
     </button>

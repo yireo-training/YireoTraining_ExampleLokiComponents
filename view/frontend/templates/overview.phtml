@@ -19,7 +19,8 @@ $exampleListing = $viewModelFactory->create(ExampleListing::class);
     <ul class="list-disc pl-4">
         <?php foreach ($exampleListing->getLinks() as $link): ?>
             <li>
-                <a class="hover:text-sky-500" href="<?= $block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
+                <a class="hover:text-sky-500" href="<?= /* @noEscape */
+$block->getUrl($link['url']) ?>"><?= $link['label'] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>
