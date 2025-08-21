@@ -6,6 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.11] - 21 August 2025
+### Fixed
+- Fix duplicate import
+- Fix escaping of SVGs
+- Replace LokiComponentsUtilBlockCssClass with LokiCssUtilsUtilCssClass
+- Fix all CSS todos
+- Declare used PHP namespaces
+- Fix newlines after comments
+- Declare used PHP namespaces
+- Add escaping of template code
+- Formatting
+- Fix newlines after comments
+- Declare used PHP namespaces
+- Add escaping of template code
+- Document latest version of template
+- Add missing strict_types declaration
+
 ## [0.0.10] - 30 July 2025
 ### Fixed
 - Add counter for exceptions example
