@@ -1,16 +1,22 @@
 {
     "modules": [
-        "Loki_Components"
+        "Loki_Components",
+        "Magento_Customer",
+        "Magento_Store"
     ],
     "components": [
         "example-loki-components.random",
-        "example-loki-components.modal",
+        "example-loki-components.modal.modal1",
+        "example-loki-components.modal.modal2",
+        "example-loki-components.modal.modal3",
+        "example-loki-components.modal.modal4",
         "example-loki-components.like",
         "example-loki-components.switcher",
         "example-loki-components.comments-add",
         "example-loki-components.comments-listing",
         "example-loki-components.comments-counter",
-        "example-loki-components.notification"
+        "example-loki-components.notification",
+        "example-loki-components.exceptions"
     ],
     "config": [],
     "tests": {
