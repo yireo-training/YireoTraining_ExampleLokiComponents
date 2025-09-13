@@ -13,13 +13,20 @@ use Magento\Framework\View\Element\Template;
             ...LokiComponentType,
             notify(event) {
                 const buttonElement = event.target;
-                const data = {
-                    area: buttonElement.getAttribute('data-loki-area'),
-                    type: buttonElement.getAttribute('data-loki-type'),
-                    text: buttonElement.getAttribute('data-loki-text'),
-                };
+                const area = buttonElement.getAttribute('data-loki-area');
+                const type = buttonElement.getAttribute('data-loki-type');
+                const text = buttonElement.getAttribute('data-loki-text');
 
-                this.post(data);
+                if (area === 'js') {
+                    Alpine.store('LokiMessageStore').addMessage(type, text);
+                    return;
+                }
+
+                this.post({
+                    area: area,
+                    type: type,
+                    text: text,
+                });
             }
         }));
     });

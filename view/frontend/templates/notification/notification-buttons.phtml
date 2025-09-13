@@ -17,10 +17,14 @@ use Loki\Components\Factory\ViewModelFactory;
 $blockRenderer = $viewModelFactory->create(BlockRenderer::class);
 
 $notifications = [
-    ['area' => 'global', 'type' => 'notice', 'text' => 'Global notice'],
-    ['area' => 'global', 'type' => 'success', 'text' => 'Global success'],
-    ['area' => 'global', 'type' => 'warning', 'text' => 'Global warning'],
-    ['area' => 'global', 'type' => 'error', 'text' => 'Global error'],
+    ['area' => 'js', 'type' => 'notice', 'text' => 'Global notice (JS)'],
+    ['area' => 'js', 'type' => 'success', 'text' => 'Global success (JS)'],
+    ['area' => 'js', 'type' => 'warning', 'text' => 'Global warning (JS)'],
+    ['area' => 'js', 'type' => 'error', 'text' => 'Global error (JS)'],
+    ['area' => 'global', 'type' => 'notice', 'text' => 'Global notice (PHP)'],
+    ['area' => 'global', 'type' => 'success', 'text' => 'Global success (PHP)'],
+    ['area' => 'global', 'type' => 'warning', 'text' => 'Global warning (PHP)'],
+    ['area' => 'global', 'type' => 'error', 'text' => 'Global error (PHP)'],
     ['area' => 'local', 'type' => 'notice', 'text' => 'Local notice'],
     ['area' => 'local', 'type' => 'success', 'text' => 'Local success'],
     ['area' => 'local', 'type' => 'warning', 'text' => 'Local warning'],
