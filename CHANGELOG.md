@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.13] - 16 September 2025
+### Fixed
+- Add LESS
+- Add new Loki_Base as dependency and move over common logic
+
 ## [0.0.12] - 02 September 2025
 ### Fixed
 - Add CI files
