@@ -20,7 +20,7 @@
             <block name="example-loki-components.comments-counter" template="YireoTraining_ExampleLokiComponents::comments/comments-counter.phtml"/>
         </referenceContainer>
 
-        <referenceContainer name="loki-components">
+        <referenceContainer name="loki.script.component">
             <block name="example-loki-components.comments-script" template="YireoTraining_ExampleLokiComponents::comments/comments-script.phtml"/>
         </referenceContainer>
     </body>
