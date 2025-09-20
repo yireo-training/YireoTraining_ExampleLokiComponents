@@ -20,9 +20,8 @@ class NotificationRepository extends ComponentRepository
 
     public function getValue(): mixed
     {
-        $this->messageManager->addNoticeMessage('Hit the global buttons');
-
         if (false === $this->ajax->isAjax()) {
+            $this->messageManager->addNoticeMessage('Hit the global buttons');
             $this->getLocalMessageRegistry()->addNotice('Hit the local buttons');
         }
 
