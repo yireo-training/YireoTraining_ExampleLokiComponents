@@ -41,7 +41,7 @@ class NotificationRepository extends ComponentRepository
                     $this->messageManager->addSuccessMessage($data['text']);
                     break;
                 case 'warning':
-                    $this->messageManager->addWarningMessage($data['text']);
+                    $this->messageManager->addComplexWarningMessage('yireoTrainingExampleLokiComponents');
                     break;
                 case 'error':
                     $this->messageManager->addErrorMessage($data['text']);
