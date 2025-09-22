@@ -12,8 +12,8 @@
             </block>
         </referenceContainer>
 
-        <referenceContainer name="loki.script.component">
+        <referenceBlock name="loki.script.component">
             <block name="example-loki-components.notification-script" template="YireoTraining_ExampleLokiComponents::notification/notification-script.phtml"/>
-        </referenceContainer>
+        </referenceBlock>
     </body>
 </page>
