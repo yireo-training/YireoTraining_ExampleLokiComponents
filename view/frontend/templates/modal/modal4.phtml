@@ -8,7 +8,7 @@ use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 use Loki\Components\Component\ComponentViewModel;
 use Loki\Components\Factory\ViewModelFactory;
-use Loki\Components\Util\ImageOutput;
+use Loki\Components\Util\Block\ImageRenderer;
 
 /** @var CssClass $css */
 /** @var Escaper $escaper */
@@ -16,7 +16,7 @@ use Loki\Components\Util\ImageOutput;
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ComponentViewModel $viewModel */
 /** @var ImageOutput */
-$imageOutput = $viewModelFactory->create(ImageOutput::class);
+
 ?>
 <div class="<?= /* noEscape */
 /* @noEscape */ $css('my-4') ?>">
@@ -43,7 +43,7 @@ $imageOutput = $viewModelFactory->create(ImageOutput::class);
                 class="<?= /* noEscape */
 /* @noEscape */ $css('float-right cursor-pointer w-4', 'close-button') ?>"
             >
-                <?= /* @noEscape */ $imageOutput->get('Loki_Components::images/xmark.svg') ?>
+                <?= /* @noEscape */ $imageRenderer->get('Loki_Components::images/xmark.svg') ?>
             </button>
 
             <p class="<?= /* noEscape */
