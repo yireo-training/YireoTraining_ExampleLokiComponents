@@ -5,26 +5,26 @@
 
     <body>
         <referenceContainer name="content">
-            <block name="example-loki-components.modal" template="YireoTraining_ExampleLokiComponents::modal.phtml">
-                <block name="example-loki-components.modal.modal1" template="YireoTraining_ExampleLokiComponents::modal/modal1.phtml">
+            <block name="loki-component-example.modal" template="YireoTraining_ExampleLokiComponents::modal.phtml">
+                <block name="loki-component-example.modal.modal1" template="YireoTraining_ExampleLokiComponents::modal/modal1.phtml">
                     <arguments>
                         <argument name="js_component_name" xsi:type="string">LokiComponentModal</argument>
                     </arguments>
                 </block>
 
-                <block name="example-loki-components.modal.modal2" template="YireoTraining_ExampleLokiComponents::modal/modal2.phtml">
+                <block name="loki-component-example.modal.modal2" template="YireoTraining_ExampleLokiComponents::modal/modal2.phtml">
                     <arguments>
                         <argument name="js_component_name" xsi:type="string">LokiComponentModal</argument>
                     </arguments>
                 </block>
 
-                <block name="example-loki-components.modal.modal3" template="YireoTraining_ExampleLokiComponents::modal/modal3.phtml">
+                <block name="loki-component-example.modal.modal3" template="YireoTraining_ExampleLokiComponents::modal/modal3.phtml">
                     <arguments>
                         <argument name="js_component_name" xsi:type="string">LokiComponentModal</argument>
                     </arguments>
                 </block>
 
-                <block name="example-loki-components.modal.modal4" template="YireoTraining_ExampleLokiComponents::modal/modal4.phtml">
+                <block name="loki-component-example.modal.modal4" template="YireoTraining_ExampleLokiComponents::modal/modal4.phtml">
                     <arguments>
                         <argument name="js_component_name" xsi:type="string">LokiComponentModal</argument>
                     </arguments>

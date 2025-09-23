@@ -5,23 +5,23 @@
 
     <body>
         <referenceContainer name="content">
-            <block name="example-loki-components.comments-add" template="YireoTraining_ExampleLokiComponents::comments/comments-add.phtml">
+            <block name="loki-component-example.comments-add" template="YireoTraining_ExampleLokiComponents::comments/comments-add.phtml">
                 <arguments>
                     <argument name="js_component_name" xsi:type="string">ExampleLokiComponentsComments</argument>
                 </arguments>
             </block>
 
-            <block name="example-loki-components.comments-listing" template="YireoTraining_ExampleLokiComponents::comments/comments-listing.phtml">
+            <block name="loki-component-example.comments-listing" template="YireoTraining_ExampleLokiComponents::comments/comments-listing.phtml">
                 <arguments>
                     <argument name="js_component_name" xsi:type="string">ExampleLokiComponentsComments</argument>
                 </arguments>
             </block>
 
-            <block name="example-loki-components.comments-counter" template="YireoTraining_ExampleLokiComponents::comments/comments-counter.phtml"/>
+            <block name="loki-component-example.comments-counter" template="YireoTraining_ExampleLokiComponents::comments/comments-counter.phtml"/>
         </referenceContainer>
 
         <referenceBlock name="loki.script.component">
-            <block name="example-loki-components.comments-script" template="YireoTraining_ExampleLokiComponents::comments/comments-script.phtml"/>
+            <block name="loki-component-example.comments-script" template="YireoTraining_ExampleLokiComponents::comments/comments-script.phtml"/>
         </referenceBlock>
     </body>
 </page>

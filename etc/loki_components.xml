@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Loki_Components:etc/loki_components.xsd">
 
-    <component name="example-loki-components.random"/>
+    <component name="loki-component-example.random"/>
 
-    <component name="example-loki-components.modal.modal1"/>
-    <component name="example-loki-components.modal.modal2"/>
-    <component name="example-loki-components.modal.modal3"/>
-    <component name="example-loki-components.modal.modal4"/>
+    <component name="loki-component-example.modal.modal1"/>
+    <component name="loki-component-example.modal.modal2"/>
+    <component name="loki-component-example.modal.modal3"/>
+    <component name="loki-component-example.modal.modal4"/>
 
     <component
-        name="example-loki-components.like"
+        name="loki-component-example.like"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Like\LikeViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Like\LikeRepository">
         <filter name="number"/>
     </component>
 
     <component
-        name="example-loki-components.switcher"
+        name="loki-component-example.switcher"
         viewModel="YireoTraining\ExampleLokiComponents\Component\Switcher\SwitcherViewModel"
         repository="YireoTraining\ExampleLokiComponents\Component\Switcher\SwitcherRepository">
         <filter name="number"/>
@@ -30,31 +30,31 @@
     />
 
     <component
-        name="example-loki-components.comments-add"
+        name="loki-component-example.comments-add"
         group="comments">
-        <target name="example-loki-components.comments-listing"/>
-        <target name="example-loki-components.comments-counter"/>
+        <target name="loki-component-example.comments-listing"/>
+        <target name="loki-component-example.comments-counter"/>
         <validator name="required"/>
     </component>
 
     <component
-        name="example-loki-components.comments-listing"
+        name="loki-component-example.comments-listing"
         group="comments">
-        <target name="example-loki-components.comments-counter"/>
+        <target name="loki-component-example.comments-counter"/>
     </component>
 
     <component
-        name="example-loki-components.comments-counter"
+        name="loki-component-example.comments-counter"
         group="comments"
     />
 
     <component
-        name="example-loki-components.notification"
+        name="loki-component-example.notification"
         repository="YireoTraining\ExampleLokiComponents\Component\Notification\NotificationRepository"
     />
 
     <component
-        name="example-loki-components.exceptions"
+        name="loki-component-example.exceptions"
         repository="YireoTraining\ExampleLokiComponents\Component\ExceptionTest\ExceptionTestRepository">
     </component>
 </components>

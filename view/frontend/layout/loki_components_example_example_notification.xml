@@ -5,7 +5,7 @@
 
     <body>
         <referenceContainer name="content">
-            <block name="example-loki-components.notification" template="YireoTraining_ExampleLokiComponents::notification/notification-buttons.phtml">
+            <block name="loki-component-example.notification" template="YireoTraining_ExampleLokiComponents::notification/notification-buttons.phtml">
                 <arguments>
                     <argument name="js_component_name" xsi:type="string">ExampleLokiComponentsNotify</argument>
                 </arguments>
@@ -13,7 +13,7 @@
         </referenceContainer>
 
         <referenceBlock name="loki.script.component">
-            <block name="example-loki-components.notification-script" template="YireoTraining_ExampleLokiComponents::notification/notification-script.phtml"/>
+            <block name="loki-component-example.notification-script" template="YireoTraining_ExampleLokiComponents::notification/notification-script.phtml"/>
         </referenceBlock>
     </body>
 </page>

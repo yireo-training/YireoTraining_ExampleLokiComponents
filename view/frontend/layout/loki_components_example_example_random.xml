@@ -5,7 +5,7 @@
 
     <body>
         <referenceContainer name="content">
-            <block name="example-loki-components.random" template="YireoTraining_ExampleLokiComponents::random.phtml"/>
+            <block name="loki-component-example.random" template="YireoTraining_ExampleLokiComponents::random.phtml"/>
         </referenceContainer>
     </body>
 </page>
