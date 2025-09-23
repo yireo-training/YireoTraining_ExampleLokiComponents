@@ -10,7 +10,7 @@ use Magento\Framework\Escaper;
 /** @var Escaper $escaper */
 /** @var CssClass $css */
 ?>
-<div class="<?= /* @noEscape */ $css('my-4') ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('my-4')) ?>">
     Random number: <?= $escaper->escapeHtml(rand()) ?><br/>
     <button @click="post" class="btn btn-primary">Refresh</button>
 </div>

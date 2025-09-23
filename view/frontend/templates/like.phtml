@@ -16,11 +16,11 @@ use Loki\Components\Util\Ajax;
 $ajax = $viewModelFactory->create(Ajax::class);
 $isAjax = $ajax->isAjax();
 ?>
-<div class="<?= /* @noEscape */ $css('my-4') ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('my-4')) ?>">
     <?php if ($viewModel->getValue()): ?>
         <button
             @click="toggle"
-            class="<?= /* @noEscape */ $css('btn btn-primary', 'button') ?>"
+            class="<?= $escaper->escapeHtmlAttr($css('btn btn-primary', 'button')) ?>"
             <?php if ($isAjax): ?>x-autofocus<?php endif; ?>
         >
             Unlike
@@ -28,7 +28,7 @@ $isAjax = $ajax->isAjax();
     <?php else: ?>
         <button
             @click="toggle"
-            class="<?= /* @noEscape */ $css('btn btn-primary', 'button') ?>"
+            class="<?= $escaper->escapeHtmlAttr($css('btn btn-primary', 'button')) ?>"
             <?php if ($isAjax): ?>x-autofocus<?php endif; ?>
         >
             Like

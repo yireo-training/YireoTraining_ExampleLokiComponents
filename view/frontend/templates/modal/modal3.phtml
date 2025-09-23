@@ -19,14 +19,12 @@ use Loki\Components\Util\Block\ImageRenderer;
 
 
 ?>
-<div class="<?= /* @noEscape */
-$css('') ?>">
+<div class="<?= /* @noEscape */ $css('') ?>">
     <p>Value: <span x-html="value"></span></p>
 
     <button
         @click="toggleModal"
-        class="<?= /* @noEscape */
-        $css('btn btn-primary', 'button') ?>"
+        class="<?= /* @noEscape */ $css('btn btn-primary', 'button') ?>"
         :disabled="isModalOpen"
     >
         <span x-cloak x-show="isModalOpen">Close Drawer Left</span>
@@ -35,20 +33,16 @@ $css('') ?>">
 
     <dialog
         x-ref="modal"
-        class="<?= /* @noEscape */
-        $css(
+        class="<?= /* @noEscape */ $css(
             'drawer drawer-left relative bg-inherit m-0 w-full h-full', 'dialog'
         ) ?>"
     >
-        <div class="<?= /* @noEscape */
-        $css('bg-white w-1/2 h-full p-10', 'dialog-inner') ?>">
+        <div class="<?= /* @noEscape */ $css('bg-white w-1/2 h-full p-10', 'dialog-inner') ?>">
             <button
                 @click="toggleModal"
-                class="<?= /* @noEscape */
-                $css('float-right cursor-pointer w-4', 'close-button') ?>"
+                class="<?= /* @noEscape */ $css('float-right cursor-pointer w-4', 'close-button') ?>"
             >
-                <?= /* @noEscape */
-                $imageRenderer->icon($block, 'xmark') ?>
+                <?= /* @noEscape */ $imageRenderer->icon($block, 'xmark') ?>
             </button>
 
             <div class="<?= $css('p-4 grid gap-4', 'dialog-inner') ?>">

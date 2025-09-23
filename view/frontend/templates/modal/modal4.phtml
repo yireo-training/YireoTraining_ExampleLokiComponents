@@ -17,14 +17,12 @@ use Loki\Components\Util\Block\ImageRenderer;
 /** @var ImageRenderer $imageRenderer */
 
 ?>
-<div class="<?= /* @noEscape */
-$css('') ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('')) ?>">
     <p>Value: <span x-html="value"></span></p>
 
     <button
         @click="toggleModal"
-        class="<?= /* @noEscape */
-        $css('btn btn-primary', 'button') ?>"
+        class="<?= $escaper->escapeHtmlAttr($css('btn btn-primary', 'button')) ?>"
         :disabled="isModalOpen">
         <span x-cloak x-show="isModalOpen">Close Drawer Right</span>
         <span x-show="isModalClosed">Open Drawer Right</span>
@@ -32,28 +30,26 @@ $css('') ?>">
 
     <dialog
         x-ref="modal"
-        class="<?= /* @noEscape */
-        $css(
+        class="<?= $escaper->escapeHtmlAttr($css(
             'drawer-right relative bg-inherit m-0 w-full h-full inset-0',
             'dialog'
-        ) ?>"
+        )) ?>"
     >
-        <div class="<?= /* @noEscape */
-        $css(
+        <div class="<?= $escaper->escapeHtmlAttr($css(
             'modal-inner bg-white w-1/4 h-full fixed right-0 p-10',
             'dialog-inner'
-        ) ?>">
-            <?= $templateRenderer->html(
+        )) ?>">
+            <?= /* @noEscape */ $templateRenderer->html(
                 $block, 'Loki_Components::component/modal/close.phtml'
             ) ?>
 
-            <div class="<?= $css('p-4 grid gap-4', 'dialog-inner') ?>">
-                <?= $templateRenderer->html(
+            <div class="<?= $escaper->escapeHtmlAttr($css('p-4 grid gap-4', 'dialog-inner')) ?>">
+                <?= /* @noEscape */ $templateRenderer->html(
                     $block,
                     'YireoTraining_ExampleLokiComponents::modal/content.phtml'
                 ) ?>
 
-                <?= $templateRenderer->html(
+                <?= /* @noEscape */ $templateRenderer->html(
                     $block,
                     'Loki_Components::component/modal/close-button.phtml', [
                         'label' => 'Close Drawer'

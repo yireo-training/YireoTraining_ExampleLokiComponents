@@ -8,10 +8,10 @@ use Magento\Framework\View\Element\Template;
 /** @var CssClass $css */
 /** @var Template $block */
 ?>
-<div class="<?= /* @noEscape */ $css('') ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('')) ?>">
     <h1 class="text-2xl">Modal examples</h1>
 
-    <div class="<?= /* @noEscape */ $css('my-8 modal-examples flex flex-col gap-4') ?>">
+    <div class="<?= $escaper->escapeHtmlAttr($css('my-8 modal-examples flex flex-col gap-4')) ?>">
         <?= /* @noEscape */ $block->getChildHtml() ?>
     </div>
 </div>

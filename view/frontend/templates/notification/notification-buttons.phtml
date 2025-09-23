@@ -27,11 +27,11 @@ $notifications = [
     ['area' => 'local', 'type' => 'error', 'text' => 'Local error'],
 ];
 ?>
-<div class="<?= /* @noEscape */ $css('my-4 grid grid-cols-4') ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('my-4 grid grid-cols-4')) ?>">
     <?php foreach ($notifications as $notification): ?>
     <button
         @click="notify"
-        class="<?= $css('m-8 btn btn-color-[--button-'.$notification['type'].']') ?>"
+        class="<?= $escaper->escapeHtmlAttr($css('m-8 btn btn-color-[--button-'.$notification['type'].']')) ?>"
         data-loki-area="<?= $notification['area'] ?>"
         data-loki-type="<?= $notification['type'] ?>"
         data-loki-text="<?= $notification['text'] ?>">

@@ -19,8 +19,7 @@ use Loki\Components\Util\Block\ImageRenderer;
 $viewModel = $block->getViewModel();
 
 ?>
-<p class="<?= /* @noEscape */
-$css('', 'dialog-content') ?>">
+<p class="<?= /* @noEscape */ $css('', 'dialog-content') ?>">
     Input your text here
 </p>
 
@@ -29,6 +28,5 @@ $css('', 'dialog-content') ?>">
     type="text"
     :value="value"
     @change="setValue"
-    class="<?= /* @noEscape */
-    $css('form-input', 'dialog-input') ?>"
+    class="<?= /* @noEscape */ $css('form-input', 'dialog-input') ?>"
 />

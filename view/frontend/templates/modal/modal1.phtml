@@ -18,14 +18,12 @@ use Loki\Components\Util\Block\ImageRenderer;
 
 
 ?>
-<div class="<?= /* @noEscape */
-$css('') ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('')) ?>">
     <p>Value: <span x-html="value"></span></p>
 
     <button
         @click="toggleModal"
-        class="<?= /* @noEscape */
-        $css('btn btn-primary', 'button') ?>"
+        class="<?= $escaper->escapeHtmlAttr($css('btn btn-primary', 'button')) ?>"
         :disabled="isModalOpen"
     >
         <span x-cloak x-show="isModalOpen">Close Simple Modal</span>
@@ -34,19 +32,18 @@ $css('') ?>">
 
     <dialog
         x-ref="modal"
-        class="<?= /* @noEscape */
-        $css('border border-zinc-400 rounded-lg p-4', 'dialog') ?>"
+        class="<?= $escaper->escapeHtmlAttr($css('border border-zinc-400 rounded-lg p-4', 'dialog')) ?>"
     >
-        <?= $templateRenderer->html(
+        <?= /* @noEscape */ $templateRenderer->html(
             $block, 'Loki_Components::component/modal/close.phtml'
         ) ?>
 
-        <div class="<?= $css('p-4 grid gap-4', 'dialog-inner') ?>">
-            <?= $templateRenderer->html(
+        <div class="<?= $escaper->escapeHtmlAttr($css('p-4 grid gap-4', 'dialog-inner')) ?>">
+            <?= /* @noEscape */ $templateRenderer->html(
                 $block, 'YireoTraining_ExampleLokiComponents::modal/content.phtml'
             ) ?>
 
-            <?= $templateRenderer->html(
+            <?= /* @noEscape */ $templateRenderer->html(
                 $block, 'Loki_Components::component/modal/close-button.phtml',
                 [
                     'label' => 'Close Modal'
