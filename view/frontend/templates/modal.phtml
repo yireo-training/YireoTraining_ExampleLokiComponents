@@ -1,16 +1,17 @@
 <?php
 declare(strict_types=1);
 
-/** @version 0.0.14 */
-
 use Loki\CssUtils\Util\CssClass;
 use Magento\Framework\View\Element\Template;
 
+/** @version 0.0.14 */
 /** @var CssClass $css */
 /** @var Template $block */
 ?>
-<div class="<?= /* @noEscape */ $css('my-4') ?>">
-    <h1>Modal examples</h1>
+<div class="<?= /* @noEscape */ $css('') ?>">
+    <h1 class="text-2xl">Modal examples</h1>
 
-    <?= /* @noEscape */ $block->getChildHtml() ?>
+    <div class="<?= /* @noEscape */ $css('my-8 modal-examples flex flex-col gap-4') ?>">
+        <?= /* @noEscape */ $block->getChildHtml() ?>
+    </div>
 </div>

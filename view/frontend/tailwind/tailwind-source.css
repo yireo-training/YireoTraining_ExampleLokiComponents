@@ -1,0 +1,27 @@
+@layer components {
+    @keyframes drawer-left-animation {
+        from {
+            left: -800px;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    .drawer-left[open] {
+        animation: drawer-left-animation 1s;
+    }
+
+    @keyframes drawer-right-animation {
+        from {
+            right: -800px;
+        }
+        to {
+            right: 0;
+        }
+    }
+
+    .drawer-right[open] .modal-inner {
+        animation: drawer-right-animation 500ms;
+    }
+}

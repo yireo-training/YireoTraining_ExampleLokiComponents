@@ -14,19 +14,21 @@ use Loki\Components\Util\Block\ImageRenderer;
 /** @var Template $block */
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ComponentViewModel $viewModel */
-/** @var ImageOutput */
+/** @var ImageRenderer $imageRenderer */
 /** @var CssClass $css */
 
 
 ?>
 <div class="<?= /* noEscape */
-/* @noEscape */ $css('my-4') ?>">
+/* @noEscape */
+$css('') ?>">
     <p>Value: <span x-html="value"></span></p>
 
     <button
         @click="toggleModal"
         class="<?= /* noEscape */
-        /* @noEscape */ $css('btn btn-primary', 'button') ?>"
+        /* @noEscape */
+        $css('btn btn-primary', 'button') ?>"
         :disabled="isModalOpen"
     >
         <span x-cloak x-show="isModalOpen">Close Full Window Modal</span>
@@ -36,35 +38,32 @@ use Loki\Components\Util\Block\ImageRenderer;
     <dialog
         x-ref="modal"
         class="<?= /* noEscape */
-        /* @noEscape */ $css('border border-zinc-400 rounded-lg px-4 pb-4 w-full h-full', 'dialog') ?>"
+        /* @noEscape */
+        $css(
+            'fullscreen border border-zinc-400 rounded-lg px-4 pb-4 w-full h-full',
+            'dialog'
+        ) ?>"
     >
         <div class="<?= /* noEscape */
-        /* @noEscape */ $css('w-full h-full', 'dialog-inner') ?>">
-            <button @click="toggleModal" class="<?= /* noEscape */
-            /* @noEscape */ $css('float-right cursor-pointer w-4', 'close-button') ?>">
-                <?= /* @noEscape */ $imageRenderer->get('Loki_Components::images/xmark.svg') ?>
-            </button>
+        /* @noEscape */
+        $css('w-full h-full p-4', 'dialog-inner') ?>">
+            <?= $templateRenderer->html(
+                $block, 'Loki_Components::component/modal/close.phtml'
+            ) ?>
 
-            <p class="<?= /* noEscape */
-            /* @noEscape */ $css('my-4', 'dialog-content') ?>">
-                Input your text here
-            </p>
+            <div class="<?= $css('p-4 md:w-1/2 grid gap-4', 'dialog-inner') ?>">
+                <?= $templateRenderer->html(
+                    $block, 'YireoTraining_ExampleLokiComponents::modal/content.phtml'
+                ) ?>
 
-            <input
-                type="text"
-                :value="value"
-                @change="setValue"
-                class="<?= /* noEscape */
-            /* @noEscape */ $css('form-input', 'dialog-input') ?>"
-            />
-
-            <button
-                @click="toggleModal"
-                class="<?= /* noEscape */
-            /* @noEscape */ $css('btn btn-primary mt-4', 'dialog-button') ?>"
-            >
-                <span>Close Full Window Modal</span>
-            </button>
+                <?= $templateRenderer->html(
+                    $block,
+                    'Loki_Components::component/modal/close-button.phtml',
+                    [
+                        'label' => 'Close Full Window Modal'
+                    ]
+                ) ?>
+            </div>
         </div>
     </dialog>
 </div>

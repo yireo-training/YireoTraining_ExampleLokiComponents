@@ -1,0 +1,36 @@
+<?php
+declare(strict_types=1);
+
+use Loki\CssUtils\Util\CssClass;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Loki\Components\Component\ComponentViewModel;
+use Loki\Components\Factory\ViewModelFactory;
+use Loki\Components\Util\Block\ImageRenderer;
+
+/** @version 0.0.14 */
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var ComponentViewModel $viewModel */
+/** @var ImageRenderer $imageRenderer */
+/** @var CssClass $css */
+
+$viewModel = $block->getViewModel();
+
+?>
+<p class="<?= /* noEscape */
+/* @noEscape */
+$css('', 'dialog-content') ?>">
+    Input your text here
+</p>
+
+<input
+    id="<?= $viewModel->getElementId() ?>-input"
+    type="text"
+    :value="value"
+    @change="setValue"
+    class="<?= /* noEscape */
+    /* @noEscape */
+    $css('form-input', 'dialog-input') ?>"
+/>
