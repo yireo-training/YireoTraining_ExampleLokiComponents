@@ -39,5 +39,5 @@ $notifications = [
         </button>
     <?php endforeach; ?>
 
-    <?= /* @noEscape */ $childRenderer->html( 'loki-components.utils.local-messages') ?>
+    <?= /* @noEscape */ $childRenderer->html( $block, 'loki-components.utils.local-messages') ?>
 </div>
