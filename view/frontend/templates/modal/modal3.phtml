@@ -19,14 +19,14 @@ use Loki\Components\Util\Block\ImageRenderer;
 
 
 ?>
-<div class="<?= /* noEscape */
+<div class="<?= /* @noEscape */
 /* @noEscape */
 $css('') ?>">
     <p>Value: <span x-html="value"></span></p>
 
     <button
         @click="toggleModal"
-        class="<?= /* noEscape */
+        class="<?= /* @noEscape */
         /* @noEscape */
         $css('btn btn-primary', 'button') ?>"
         :disabled="isModalOpen"
@@ -37,18 +37,18 @@ $css('') ?>">
 
     <dialog
         x-ref="modal"
-        class="<?= /* noEscape */
+        class="<?= /* @noEscape */
         /* @noEscape */
         $css(
             'drawer drawer-left relative bg-inherit m-0 w-full h-full', 'dialog'
         ) ?>"
     >
-        <div class="<?= /* noEscape */
+        <div class="<?= /* @noEscape */
         /* @noEscape */
         $css('bg-white w-1/2 h-full p-10', 'dialog-inner') ?>">
             <button
                 @click="toggleModal"
-                class="<?= /* noEscape */
+                class="<?= /* @noEscape */
                 /* @noEscape */
                 $css('float-right cursor-pointer w-4', 'close-button') ?>"
             >
