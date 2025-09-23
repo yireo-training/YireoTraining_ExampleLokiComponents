@@ -3,12 +3,14 @@ declare(strict_types=1);
 
 /** @version 0.0.14 */
 
+use Loki\Components\Component\ComponentViewModelInterface;
 use Loki\CssUtils\Util\CssClass;
 use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 use YireoTraining\ExampleLokiComponents\Component\Comments\CommentsViewModel;
 use Loki\Components\Util\ComponentUtil;
 
+/** @var ComponentViewModelInterface $viewModel */
 /** @var CssClass $css */
 /** @var Escaper $escaper */
 /** @var Template $block */

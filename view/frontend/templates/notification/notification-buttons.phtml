@@ -1,12 +1,16 @@
 <?php
 declare(strict_types=1);
 
+use Magento\Framework\Escaper;
+use Loki\Components\Util\Block\TemplateRenderer;
 use Loki\CssUtils\Util\CssClass;
 use Magento\Framework\View\Element\Template;
 use Loki\Components\Util\Block\BlockRenderer;
 use Loki\Components\Factory\ViewModelFactory;
 
 /** @version 0.0.14 */
+/** @var Escaper $escaper */
+/** @var TemplateRenderer $blockRenderer */
 /** @var CssClass $css */
 /** @var Template $block */
 /** @var BlockRenderer $blockRenderer */
