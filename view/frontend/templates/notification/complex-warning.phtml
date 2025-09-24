@@ -11,6 +11,6 @@ use Magento\Framework\View\Element\Template;
 /** @var Escaper $escaper */
 ?>
 Test linking to
-<a href="<?php echo $escaper->escapeUrl($block->getUrl('customer/account')) ?>">
-    <?php echo $block->escapeHtml(__('My Account')) ?>
+<a href="<?= $escaper->escapeUrl($block->getUrl('customer/account')) ?>">
+    <?= $block->escapeHtml(__('My Account')) ?>
 </a>
