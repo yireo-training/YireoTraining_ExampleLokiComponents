@@ -36,10 +36,10 @@ $notifications = [
     <button
         @click="notify"
         class="<?= $escaper->escapeHtmlAttr($css('m-8 btn btn-color-[--button-'.$notification['type'].']')) ?>"
-        data-loki-area="<?= $notification['area'] ?>"
-        data-loki-type="<?= $notification['type'] ?>"
-        data-loki-text="<?= $notification['text'] ?>">
-        <?= $notification['text'] ?>
+        data-loki-area="<?= $escaper->escapeHtml($notification['area']) ?>"
+        data-loki-type="<?= $escaper->escapeHtml($notification['type']) ?>"
+        data-loki-text="<?= $escaper->escapeHtml($notification['text']) ?>">
+        <?= $escaper->escapeHtml($notification['text']) ?>
         </button>
     <?php endforeach; ?>
 

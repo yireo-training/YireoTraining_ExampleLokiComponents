@@ -26,7 +26,7 @@ $exampleListing = $viewModelFactory->create(ExampleListing::class);
                     class="<?= $escaper->escapeHtmlAttr($css('hover:text-sky-500', 'anchor')) ?>"
                     href="<?= $escaper->escapeUrl($block->getUrl($link['url'])) ?>"
                 >
-                    <?= $link['label'] ?>
+                    <?= $escaper->escapeHtml($link['label']) ?>
                 </a>
             </li>
         <?php endforeach; ?>
