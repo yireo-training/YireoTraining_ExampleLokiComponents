@@ -6,6 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.15] - 24 September 2025
+### Fixed
+- Re-ordering code blocks in PHTML templates
+- Import used PHP namespaces into PHTML templates
+- Add escaping of template code
+- Document latest version of template
+- Sort entries of module.xml file
+- Sort dependencies of composer.json
+- Enhance modals under Luma a bit
+- Fix block rendering of static blocks
+- Change XML layout name
+- Implement new imageRenderer
+- Rename deprecated to ImageOutput to preferred class
+- Change containers into blocks to allow for caching
+- Rewrite transfer of global messages from components to be a lot simpler
+- Rename container to new container name
+
 ## [0.0.14] - 17 September 2025
 ### Fixed
 - Add LESS sources
