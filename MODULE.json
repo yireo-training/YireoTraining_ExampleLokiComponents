@@ -17,18 +17,18 @@
         "Yireo_CspUtilities"
     ],
     "components": [
-        "example-loki-components.comments-add",
-        "example-loki-components.comments-counter",
-        "example-loki-components.comments-listing",
-        "example-loki-components.exceptions",
-        "example-loki-components.like",
-        "example-loki-components.modal.modal1",
-        "example-loki-components.modal.modal2",
-        "example-loki-components.modal.modal3",
-        "example-loki-components.modal.modal4",
-        "example-loki-components.notification",
-        "example-loki-components.random",
-        "example-loki-components.switcher"
+        "loki-component-example.comments-add",
+        "loki-component-example.comments-counter",
+        "loki-component-example.comments-listing",
+        "loki-component-example.exceptions",
+        "loki-component-example.like",
+        "loki-component-example.modal.modal1",
+        "loki-component-example.modal.modal2",
+        "loki-component-example.modal.modal3",
+        "loki-component-example.modal.modal4",
+        "loki-component-example.notification",
+        "loki-component-example.random",
+        "loki-component-example.switcher"
     ],
     "config": [],
     "tests": {
