@@ -14,18 +14,18 @@ use YireoTraining\ExampleLokiComponents\ViewModel\ExampleListing;
 
 $exampleListing = $viewModelFactory->create(ExampleListing::class);
 ?>
-<div class="<?= /* @noEscape */ $css('loki') ?>">
-    <div class="<?= /* @noEscape */ $css('pr-16', 'inner') ?>">
-        <h2 class="<?= /* @noEscape */ $css('text-md leading-5 font-semibold uppercase', 'header') ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('loki')) ?>">
+    <div class="<?= $escaper->escapeHtmlAttr($css('pr-16', 'inner')) ?>">
+        <h2 class="<?= $escaper->escapeHtmlAttr($css('text-md leading-5 font-semibold uppercase', 'header')) ?>">
             Loki Components
         </h2>
 
-        <ul class="<?= /* @noEscape */ $css('mt-4', 'listing') ?>">
+        <ul class="<?= $escaper->escapeHtmlAttr($css('mt-4', 'listing')) ?>">
             <?php foreach ($exampleListing->getLinks() as $link): ?>
                 <li>
                     <a
-                        class="<?= /* @noEscape */ $css('text-base leading-10', 'anchor') ?>"
-                        href="<?= /* @noEscape */ $block->getUrl($link['url']) ?>">
+                        class="<?= $escaper->escapeHtmlAttr($css('text-base leading-10', 'anchor')) ?>"
+                        href="<?= $escaper->escapeUrl($block->getUrl($link['url'])) ?>">
                         <?= $link['label'] ?>
                     </a>
                 </li>

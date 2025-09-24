@@ -14,17 +14,17 @@ use YireoTraining\ExampleLokiComponents\ViewModel\ExampleListing;
 
 $exampleListing = $viewModelFactory->create(ExampleListing::class);
 ?>
-<div class="<?= /* @noEscape */ $css('loki') ?>">
-    <h1 class="<?= /* @noEscape */ $css('text-3xl', 'heading') ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('loki')) ?>">
+    <h1 class="<?= $escaper->escapeHtmlAttr($css('text-3xl', 'heading')) ?>">
         Yireo Loki Components Examples
     </h1>
 
-    <ul class="<?= /* @noEscape */ $css('list-disc pl-4', 'listing') ?>">
+    <ul class="<?= $escaper->escapeHtmlAttr($css('list-disc pl-4', 'listing')) ?>">
         <?php foreach ($exampleListing->getLinks() as $link): ?>
             <li>
                 <a
-                    class="<?= /* @noEscape */ $css('hover:text-sky-500', 'anchor') ?>"
-                    href="<?= /* @noEscape */ $block->getUrl($link['url']) ?>"
+                    class="<?= $escaper->escapeHtmlAttr($css('hover:text-sky-500', 'anchor')) ?>"
+                    href="<?= $escaper->escapeUrl($block->getUrl($link['url'])) ?>"
                 >
                     <?= $link['label'] ?>
                 </a>
