@@ -46,12 +46,12 @@ use Loki\Components\Util\Block\ImageRenderer;
                 <?= /* @noEscape */ $imageRenderer->icon($block, 'xmark') ?>
             </button>
 
-            <div class="<?= $css('p-4 grid gap-4', 'dialog-inner') ?>">
-                <?= $templateRenderer->html(
+            <div class="<?= /* @noEscape */ $css('p-4 grid gap-4', 'dialog-inner') ?>">
+                <?= /* @noEscape */ $templateRenderer->html(
                     $block, 'YireoTraining_ExampleLokiComponents::modal/content.phtml'
                 ) ?>
 
-                <?= $templateRenderer->html(
+                <?= /* @noEscape */ $templateRenderer->html(
                     $block,
                     'Loki_Components::component/modal/close-button.phtml', [
                     'label' => 'Close Drawer'

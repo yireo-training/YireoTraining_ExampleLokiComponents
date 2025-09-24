@@ -26,7 +26,7 @@ $viewModel = $block->getViewModel();
 </p>
 
 <input
-    id="<?= $viewModel->getElementId() ?>-input"
+    id="<?= $escaper->escapeHtml($viewModel->getElementId()) ?>-input"
     type="text"
     :value="value"
     @change="setValue"
