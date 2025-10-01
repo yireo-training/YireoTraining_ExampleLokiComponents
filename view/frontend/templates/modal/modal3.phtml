@@ -43,7 +43,7 @@ use Loki\Components\Util\Block\ImageRenderer;
                 @click="toggleModal"
                 class="<?= $escaper->escapeHtmlAttr($css('float-right cursor-pointer w-4', 'close-button')) ?>"
             >
-                <?= $escaper->escapeHtml($imageRenderer->icon($block, 'xmark')) ?>
+                <?= /* @noEscape */ $imageRenderer->icon($block, 'xmark') ?>
             </button>
 
             <div class="<?= $escaper->escapeHtmlAttr($css('p-4 grid gap-4', 'dialog-inner')) ?>">
