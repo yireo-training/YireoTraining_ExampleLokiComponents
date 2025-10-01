@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.16] - 01 October 2025
+### Fixed
+- Fix escaping
+
 ## [0.0.15] - 24 September 2025
 ### Fixed
 - Re-ordering code blocks in PHTML templates
