@@ -17,7 +17,7 @@ use Magento\Framework\View\Element\Template;
                 const text = buttonElement.getAttribute('data-loki-text');
 
                 if (area === 'js') {
-                    Alpine.store('LokiMessageStore').addMessage(type, text);
+                    Alpine.store('Message').addMessage(type, text);
                     return;
                 }
 
