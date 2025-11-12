@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.18] - 12 November 2025
+### Fixed
+- Rename LokiMessageStore to Message
+- Update composer keywords
+
 ## [0.0.17] - 17 October 2025
 ### Fixed
 - Upgrade deps
