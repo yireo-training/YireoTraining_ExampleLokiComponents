@@ -16,32 +16,32 @@ class CommentsRepository extends ComponentRepository
         return (array)$this->getContext()->getCustomerSession()->getComments();
     }
 
-    public function saveValue($data): void
+    public function saveValue($value): void
     {
-        if (false === is_array($data)) {
+        if (false === is_array($value)) {
             throw new RuntimeException('Not an array');
         }
 
-        if (false === isset($data['task'])) {
+        if (false === isset($value['task'])) {
             throw new RuntimeException('No "task" parameter provided');
         }
 
-        if (false === isset($data['comment'])) {
+        if (false === isset($value['comment'])) {
             throw new RuntimeException('No "comment" parameter provided');
         }
 
         $customerSession = $this->getContext()->getCustomerSession();
         $comments = (array)$customerSession->getComments();
 
-        if ($data['task'] === 'add') {
-            $comments[] = (string)$data['comment'];
+        if ($value['task'] === 'add') {
+            $comments[] = (string)$value['comment'];
             $customerSession->setComments($comments);
             $this->getGlobalMessageRegistry()->addNotice('Added a comment');
         }
 
-        if ($data['task'] === 'remove') {
-            $comments = array_filter($comments, function ($comment) use ($data) {
-                return $data['comment'] !== $comment;
+        if ($value['task'] === 'remove') {
+            $comments = array_filter($comments, function ($comment) use ($value) {
+                return $value['comment'] !== $comment;
             });
 
             $customerSession->setComments($comments);
