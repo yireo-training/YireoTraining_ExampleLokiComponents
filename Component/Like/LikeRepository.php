@@ -2,11 +2,11 @@
 
 namespace YireoTraining\ExampleLokiComponents\Component\Like;
 
-use Loki\Components\Component\ComponentContext;
 use Loki\Components\Component\ComponentRepository;
+use YireoTraining\ExampleLokiComponents\Component\ExampleComponentContext;
 
 /**
- * @method ComponentContext getContext()
+ * @method ExampleComponentContext getContext()
  */
 class LikeRepository extends ComponentRepository
 {
