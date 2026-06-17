@@ -14,6 +14,7 @@
         "Magento_Customer",
         "Magento_Directory",
         "Magento_Eav",
+        "Magento_Quote",
         "Magento_Store",
         "Yireo_CspUtilities"
     ],
@@ -38,5 +39,12 @@
         "functional": 0
     },
     "phpcs_severity": "8",
-    "phpstan_level": "1"
+    "phpstan_level": "1",
+    "module_name": "YireoTraining_ExampleLokiComponents",
+    "composer_name": "yireo-training/magento2-example-loki-components",
+    "php_versions": [
+        "8.3"
+    ],
+    "skip_magento_versions": [],
+    "skip_css_utils": false
 }
