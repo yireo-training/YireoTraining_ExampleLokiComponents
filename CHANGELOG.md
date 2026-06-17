@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.19] - 17 June 2026
+### Fixed
+- Fix broken context with missing session
+
 ## [0.0.18] - 12 November 2025
 ### Fixed
 - Rename LokiMessageStore to Message
