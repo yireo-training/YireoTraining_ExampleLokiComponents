@@ -20,7 +20,7 @@ use Loki\Components\Util\Block\ImageRenderer;
 
 ?>
 <div class="<?= $escaper->escapeHtmlAttr($css('')) ?>">
-    <p>Value: <span x-html="value"></span></p>
+    <p>Value: <span x-text="value"></span></p>
 
     <button
         @click="toggleModal"
