@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.20] - 08 August 2026
+### Security
+- Rewrite `x-html` to `x-text` because of CSP
+
 ## [0.0.19] - 17 June 2026
 ### Fixed
 - Fix broken context with missing session
