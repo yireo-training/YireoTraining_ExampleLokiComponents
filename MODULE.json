@@ -11,11 +11,13 @@
         "Loki_CssUtils",
         "Magento_Backend",
         "Magento_Config",
+        "Magento_Csp",
         "Magento_Customer",
         "Magento_Directory",
         "Magento_Eav",
         "Magento_Quote",
         "Magento_Store",
+        "Magento_Theme",
         "Yireo_CspUtilities"
     ],
     "components": [
