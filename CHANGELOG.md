@@ -6,7 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.20] - 08 August 2026
+## [0.0.20] - 03 November 2026
+### Fixed
+- Refactor setTemplate setter info construction data
+
 ### Security
 - Rewrite `x-html` to `x-text` because of CSP
 
