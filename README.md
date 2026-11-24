@@ -29,6 +29,11 @@ Next, enable this module:
 bin/magento module:enable YireoTraining_ExampleLokiComponents
 ```
 
+The example pages are disabled by default, so that they are not exposed in production. Enable them (for instance in a development environment) via **Stores > Configuration > Loki > Loki Components Examples** or via the CLI:
+```bash
+bin/magento config:set loki_example_components/general/enabled 1
+```
+
 
 ## Current status
 

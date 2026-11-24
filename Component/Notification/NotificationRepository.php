@@ -12,6 +12,10 @@ use Magento\Framework\Message\Manager as MessageManager;
  */
 class NotificationRepository extends ComponentRepository
 {
+    public const MAX_TEXT_LENGTH = 255;
+    private const AREAS = ['global', 'local'];
+    private const TYPES = ['notice', 'success', 'warning', 'error'];
+
     public function __construct(
         private MessageManager $messageManager,
         private Ajax $ajax
@@ -31,7 +35,7 @@ class NotificationRepository extends ComponentRepository
     public function saveValue(mixed $data): void
     {
         $data = (array)$data;
-        if (!isset($data['area']) || !isset($data['type']) || !isset($data['text'])) {
+        if (false === $this->isValid($data)) {
             return;
         }
 
@@ -68,5 +72,20 @@ class NotificationRepository extends ComponentRepository
                     break;
             }
         }
+    }
+
+    private function isValid(array $data): bool
+    {
+        if (false === in_array($data['area'] ?? null, self::AREAS, true)) {
+            return false;
+        }
+
+        if (false === in_array($data['type'] ?? null, self::TYPES, true)) {
+            return false;
+        }
+
+        $text = $data['text'] ?? null;
+
+        return is_string($text) && $text !== '' && mb_strlen($text) <= self::MAX_TEXT_LENGTH;
     }
 }

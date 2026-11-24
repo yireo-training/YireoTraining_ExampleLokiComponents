@@ -11,7 +11,7 @@
                 </arguments>
             </block>
 
-            <block name="loki-component-example.comments-listing" template="YireoTraining_ExampleLokiComponents::comments/comments-listing.phtml">
+            <block name="loki-component-example.comments-listing" cacheable="false" template="YireoTraining_ExampleLokiComponents::comments/comments-listing.phtml">
                 <arguments>
                     <argument name="js_component_name" xsi:type="string">ExampleLokiComponentsComments</argument>
                 </arguments>

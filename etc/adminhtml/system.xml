@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="loki_example_components" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="900" translate="label">
+            <label>Loki Components Examples</label>
+            <tab>loki</tab>
+            <resource>YireoTraining_ExampleLokiComponents::config</resource>
+            <group id="general" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label">
+                <label>General</label>
+                <field id="enabled" type="select" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label comment">
+                    <label>Enable example pages</label>
+                    <comment>Exposes the demo pages under /loki_components_example/ and the footer links. Do not enable this in production.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

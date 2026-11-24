@@ -28,7 +28,7 @@ use Loki\Components\Util\ComponentUtil;
                 <button
                     class="<?= $escaper->escapeHtmlAttr($css('btn w-3', 'button')) ?>"
                     @click="remove"
-                    data-comment="<?= $escaper->escapeHtml($comment) ?>"
+                    data-comment="<?= $escaper->escapeHtmlAttr($comment) ?>"
                 >x</button>
             </li>
         <?php endforeach; ?>

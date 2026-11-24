@@ -1,7 +1,9 @@
 {
     "sequence": [
+        "Loki_Base",
         "Loki_Components",
         "Loki_CssUtils",
+        "Magento_Config",
         "Magento_Customer",
         "Magento_Store"
     ],
@@ -34,7 +36,13 @@
         "loki-component-example.random",
         "loki-component-example.switcher"
     ],
-    "config": [],
+    "config": [
+        {
+            "path": "loki_example_components/general/enabled",
+            "label": "Loki Components Examples > General > Enable example pages",
+            "description": "Expose the demo pages under /loki_components_example/ and the footer links. Disabled by default."
+        }
+    ],
     "tests": {
         "unit": 0,
         "integration": 1,

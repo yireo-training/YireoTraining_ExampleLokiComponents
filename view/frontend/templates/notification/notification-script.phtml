@@ -2,11 +2,13 @@
 declare(strict_types=1);
 
 use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Helper\SecureHtmlRenderer;
 
 /** @version 0.0.20 */
 /** @var Template $block */
-?>
-<script>
+/** @var SecureHtmlRenderer $secureRenderer */
+
+$script = <<<'SCRIPT'
     document.addEventListener('alpine:init', () => {
         Alpine.data('ExampleLokiComponentsNotify', () => ({
             ...LokiComponentType,
@@ -29,4 +31,6 @@ use Magento\Framework\View\Element\Template;
             }
         }));
     });
-</script>
+SCRIPT;
+?>
+<?= /* @noEscape */ $secureRenderer->renderTag('script', [], $script, false) ?>
