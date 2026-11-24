@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace YireoTraining\ExampleLokiComponents\Test\Integration\Controller\Example;
 
+use Magento\Framework\App\Response\Http as HttpResponse;
 use Magento\Framework\View\LayoutInterface;
 use Magento\TestFramework\TestCase\AbstractController;
 
@@ -35,8 +36,10 @@ class IndexTest extends AbstractController
     public function testPageWhenEnabled()
     {
         $this->dispatch('loki_components_example/example/index');
-        $this->assertSame(200, $this->getResponse()->getHttpResponseCode());
-        $this->assertStringContainsString('Yireo Loki Components Examples', (string)$this->getResponse()->getBody());
+        $response = $this->getResponse();
+        $this->assertInstanceOf(HttpResponse::class, $response);
+        $this->assertSame(200, $response->getHttpResponseCode());
+        $this->assertStringContainsString('Yireo Loki Components Examples', (string)$response->getBody());
     }
 
     /**

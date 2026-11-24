@@ -1,8 +1,8 @@
 {
     "sequence": [
-        "Loki_Base",
         "Loki_Components",
         "Loki_CssUtils",
+        "Magento_Backend",
         "Magento_Config",
         "Magento_Customer",
         "Magento_Store"
