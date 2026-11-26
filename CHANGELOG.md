@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.21] - 26 November 2026
+### Changed
+- The example pages under /loki_components_example/ and their footer links are now disabled by default; turn them on under Stores > Configuration > Loki > Loki Components Examples > Enable example pages (not meant for production)
+
+### Fixed
+- Session-dependent example blocks (comments, like, switcher) could be stored in the full page cache and show one visitor's session data to others
+- Inline scripts of the comments and notification examples were blocked under a strict CSP; they now carry a CSP nonce
+- The configuration section now depends on Magento_Backend instead of Loki_Base
+
+### Security
+- The example pages and the exception test component were publicly reachable on every store that had the module installed
+- The comments and notification components accepted unvalidated input of any size into the customer session; comments are now limited to 255 characters and 20 per session, and notification areas, types and text are allow-listed
+- Attribute values in the example templates are now escaped with escapeHtmlAttr()
+
 ## [0.0.20] - 03 November 2026
 ### Fixed
 - Refactor setTemplate setter info construction data
